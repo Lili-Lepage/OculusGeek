@@ -1,0 +1,5 @@
+Pour exporter une base de donnée :
+mysqldump -u username -p databasename > filename.sql
+
+Pour importer une base de donnée :
+mysql -u username -p databasename < filename.sql
