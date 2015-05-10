@@ -1,0 +1,53 @@
+/*************************************OBJECTIF************************************************************************/
+
+.pageObjectif{
+    margin-bottom:15%;
+}
+
+.objectif {
+
+
+    margin-top:15%;
+    padding-left:30%;
+    border:1px;
+    border-style: ridge;
+    background-color: #262626;
+    color:#bdbdbd;
+
+}
+
+
+.img_P{
+    width:370px;
+    height:600px;
+    box-shadow: 2px 2px 10px #272525;
+    float:left;
+    position:absolute;
+		top:100%;
+		left:1%;
+
+
+
+}
+
+
+.titre_Ob{
+
+
+    padding-left:45%;
+    padding-right:38%;
+    font-family:'GulimChe','Arial';
+    order: solid;
+    border-bottom: 1px solid #2d2d2d;
+
+    position:relative;
+		top:80%;
+
+        text-shadow: 3px 2px 3px #7a7777;
+    color:#2f2f2f;
+
+}
+
+h1{
+    padding:1%;
+}
