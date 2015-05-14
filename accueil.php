@@ -1,4 +1,6 @@
+<?php //page de Code dans lequel on intègre les pages de design  ?>
+
 <?php
-$test = 82;
+
 include 'Views/accueilViews.php';
 ?>
