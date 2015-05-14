@@ -14,7 +14,7 @@
 <?php
 include "function.php";
 
-$connexion=connexionPDO('localhost','oculus','toto','mysqlmaster');
+$connexion=connexionPDO('localhost','oculus','root','');
 
 
 	echo 'Creation d\'un compte<BR/><BR/>';

@@ -137,7 +137,7 @@ margin-left:85%;
 
 /***********************************************FOOTER*********************************************************************************/
 
-/*footer{
+footer{
 
     display: block;
     float: none;
@@ -160,29 +160,27 @@ footer .reseaux .icones .Ico /*mode d'apparition des liens*/
 
 
 
- /*Lien footer*************************/
-
-/* a {
+ /*Lien footer**************************/ a {
  text-decoration: none;
- color: white; /
+ color: white;
 }
 
 
-a.lienM:hover /* Apparence au survol des liens *
+a.lienM:hover /* Apparence au survol des liens */
 {
     font-style: italic;
    color: #d95b14;
 }
-a.lienC:hover /* Apparence au survol des liens
+a.lienC:hover /* Apparence au survol des liens*/
 {
     font-style: italic;
    color: #d95b14;
 }
-a.lienP:hover /* Apparence au survol des liens *
+a.lienP:hover /* Apparence au survol des liens */
 {
     font-style: italic;
    color: #d95b14;
-   }*/
+   }
 
 
 
