@@ -28,8 +28,8 @@
     </nav>
     <nav class="C_I">
         <ul>
-            <li><a href="#">Connexion</a></li>
-            <li><a href="#">Inscription</a></li>
+            <li><a href="#" >Connexion</a></li>
+            <li><a href="/OculusGeek/inscription.php" >Inscription</a></li>
         </ul>
     </nav>
 </header>
