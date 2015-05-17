@@ -4,16 +4,15 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<title>Occulus_Geek</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+		<script>
+			webshims.setOptions('forms-ext', {types: 'date'});
+			webshims.polyfill('forms forms-ext');
+		</script>
     </head>
 	<body>
         <?php include 'Fixes/header.php'; ?>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
-        <script>
-            webshims.setOptions('forms-ext', {types: 'date'});
-            webshims.polyfill('forms forms-ext');
-        </script>
 
         <form action="" method="post">
             <table>

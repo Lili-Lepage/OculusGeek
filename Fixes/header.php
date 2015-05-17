@@ -1,35 +1,35 @@
 <header>
     <div class="baniere">
-        <a href="/"><img class="image" src="images/image_entete.png" /></a>
+        <a href="/OculusGeek/accueil.php"><img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/image_entete.png'?>" /></a>
     </div>
     <div id="titre">
         <h1>Oculus Geek</h1>
     </div>
     <nav class="menuTop">
         <ul class="menu">
-            <li class="itemMenu"><a href="/OculusGeek/accueil.php">Acceuil</a></li>
-            <li class="itemMenu"><a href="/OculusGeek/objectif.php">Notre objectif</a>
-            <li class="itemMenu"><a href="#">A la pointe de la technologie</a>
+            <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php"><div class="menuLinkContent">Acceuil</div></a></li>
+            <li class="itemMenu"><a class="menuLink" href="/OculusGeek/objectif.php"><div class="menuLinkContent">Notre objectif</div></a>
+            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">A la pointe de la technologie</div></a>
                 <ul class="subMenu">
-                    <li class="itemSubMenu"><a href="#">ordinateur</a></li>
-                    <li class="itemSubMenu"><a href="#">console</a></li>
-                    <li class="itemSubMenu"><a href="#">objet connecté</a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">ordinateur</div></a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" class="menuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">objet connecté</div></a></li>
                 </ul>
             </li>
-            <li class="itemMenu"><a href="#">Espace gaming</a>
+            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Espace gaming</div></a>
                 <ul class="subMenu">
-                    <li class="itemSubMenu"><a href="#">ordinateur</a></li>
-                    <li class="itemSubMenu"><a href="#">console</a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">ordinateur</div></a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
                 </ul>
             </li>
-            <li class="itemMenu"><a href="#">Leurs expériences</a></li>
-            <li class="itemMenu"><a href="#">Forum</a></li>
+            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Leurs expériences</div></a></li>
+            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Forum</div></a></li>
         </ul>
     </nav>
     <nav class="C_I">
         <ul>
-            <li><a href="/OculusGeek/connexion.php" >Connexion</a></li>
-            <li><a href="/OculusGeek/inscription.php" >Inscription</a></li>
+            <li><a href="/OculusGeek/connexion.php"><div class="btnC_I">Connexion</div></a></li>
+            <li><a href="/OculusGeek/inscription.php"><div class="btnC_I">Inscription</div></a></li>
         </ul>
     </nav>
 </header>

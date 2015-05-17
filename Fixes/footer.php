@@ -1,13 +1,4 @@
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
-		<title>Occulus_Geek</title>
-    </head>
-	<body>
-
         <footer>
-
             <div class="reseaux">
                 <ul class="icones">
                     <li><img class ="Ico" src="images/icones/facebook.png" width="70px" height="70px"/></li>
@@ -34,11 +25,6 @@
                 Pas encore inscrit
                     <a href="#" >Register</a>
             </div>
-    </footer>
-
-
-
-
-
-</body>
+    	</footer>
+	</body>
 </html>

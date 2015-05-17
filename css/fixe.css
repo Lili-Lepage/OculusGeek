@@ -18,39 +18,34 @@ body{
 }
 
 
-#titre{
-
-    font-family:'Bit Trip7 (sRB)', 'calibri', sans-serif;
-    font-size: 100%;
-    margin-bottom:20%;/*la marge en dessous du titre*/
-    margin-top: -10%; /*placé le titre sur l'imgage*/
-    margin-left: 2%;
-
+div, ul, li, img, header, footer, nav, body {
+    margin:0;
+    padding:0;
 }
 
 
 /*******************************************************MENU***************************************************************************/
-header .menuTop{
 
-    display: block;
-    float: none;
+header {
+    position: relative;
+}
+
+header .menuTop {
     position:absolute;
-        top:55%;
-        left:0%;
-        right:0%;
-    border:1px;
-    border-style: ridge;
-    background-color: #181818;
-
+    width: 100%;
+    bottom: 0px;
+    border-top: 1px ridge;
+    border-bottom: 1px ridge;
+    background-color:rgba(24, 24, 24, 0.89);
+    z-index:1;
 }
 header .menuTop .menu .itemMenu /*mode d'apparition des liens*/
 {
-
-    display: inline;
-    padding:13px 4%;
-    border:1px none;
+    display: inline-block;
     text-shadow: 3px 3px 6px #000000;
     position:relative;
+    border-bottom: 5px solid transparent;
+    width: 16%;
 }
 
 header .menuTop .menu .itemMenu a /*apparence des liens*/
@@ -59,11 +54,16 @@ header .menuTop .menu .itemMenu a /*apparence des liens*/
     color:#8c8c8c;
 }
 
+header .menuTop .menu .itemMenu .menuLink .menuLinkContent {
+    text-align: center;
+    height: 30px;
+    padding-top: 15px;
+}
+
 header .menuTop .menu .itemMenu:hover /*apparence survol des lien*/
 {
     order: solid;
-    border-width: 1px;
-    border-bottom: thick solid  #ff7011;
+    border-bottom: 5px solid  #ff7011;
 }
 
 /************************SOUS MENU***************************************/
@@ -83,55 +83,61 @@ header .menuTop .menu .itemMenu:hover .subMenu {
     display:block;
 }
 header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu {
-    padding:10px;
     border 1px none;
 }
 header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu:hover {
     border:1px solid #000;
     background-color:#2A2A2A;
 }
+header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu .subMenuLink .subMenuLinkContent {
+    padding:6%
+}
 
 
 
 
 /**************************MENU CONNEXION/INSCRIPTION*****************/
-.C_I{
-
-
+.C_I {
+    position: absolute;
     text-align:right;
-
-    }
-
+    z-index: 1;
+    background-color: #212121;
+    margin: 2%;
+    top: 0px;
+    right: 0px;
+}
 .C_I ul li /*mode d'apparition des liens*/
 {
-
-    display: inline;
+    display: inline-block;
     font-size:80%;
-    font-style:none;
     text-shadow: 2px 2px 4px #000000;
-
 }
 .C_I ul a /*apparence des liens*/
 {
-    padding:2%;
     text-decoration: none;
     color:#2b2b2b;
-
-
-
+}
+.C_I ul a .btnC_I {
+    width: 125px;
+    text-align: center;
+    padding: 15% 0px;
+    color: #FFF;
+}
+.C_I ul a .btnC_I:hover {
+    background-color: #353535;
 }
 
-.C_I ul a:hover /*apparence survol des lien*/
-{
-    order: solid;
-    border-width: 1px;
-    background-color: #d9d9d9;
-    color:#232323;
 
+ /**************************TITRE*************************/
 
-
- }
-
+header #titre {
+    position: absolute;
+    font-family:'Bit Trip7 (sRB)', 'calibri', sans-serif;
+    font-size: 100%;
+    bottom: 24%;
+    left: 9%;
+    z-index: 1;
+}
 
 /***********************************************FOOTER*********************************************************************************/
 
