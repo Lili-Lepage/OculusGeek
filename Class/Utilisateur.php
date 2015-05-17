@@ -1,8 +1,8 @@
 <?php
 class Utilisateur {
 
-    private $idUser;
-    private $pseudo = '';
+    private $userId;
+    public  $pseudo = '';
     private $passWord = '';
     private $firstName = '';
     private $lastName = '';
@@ -60,6 +60,27 @@ class Utilisateur {
 
         }
 
+    }
+
+    public static function getUserByPseudo($pseudo) {
+        include 'libs/db.php';
+        $query = $connexion->prepare('SELECT * FROM users WHERE pseudo = :pseudo ;');
+        $query->bindValue(':pseudo', $pseudo);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_OBJ);
+        $userByPseudo = 'Utilisateur inconnu';
+
+        if (is_object($user)) {
+            $userByPseudo = new Utilisateur();
+            $userByPseudo->setUserInfos(get_object_vars($user));
+        }
+
+        return $userByPseudo;
+
+    }
+
+    public function checkPassWord($passWord) {
+        return ($passWord == $this->passWord);
     }
 
 }
