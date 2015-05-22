@@ -2,6 +2,8 @@
     <html lang="fr">
     	<head>
     		<meta charset= "UTF-8" />
+    		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+    		<title>Occulus_Geek</title>
 
     </head>
 
