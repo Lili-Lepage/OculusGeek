@@ -1,31 +1,82 @@
 /*************************************OBJECTIF************************************************************************/
-
-.pageObjectif{
-    margin-bottom:15%;
+.objectifIcons{
+    padding-bottom: 30px;
 }
 
-.pageObjectif .titre_Ob{
 
-position:relative;
-left:40%;
-right:40%;
+.objectifIcons .objectifIcon{
 
-color:#232121;
+    width: 33%;
+    float: left;
 
 }
 
-/*.pageObjectif .titre_Ob .lesObjectifs{
+.objectifIcons .objectifIcon img{
+
+    width: 200px;
+    height:200px;
+    display: block;
+    margin:0 auto;
+
+}
+
+.objectifIcons .objectifIcon p{
+
+    text-align: center;
+    font-size: 20px;
 
 
-}*/
+}
+.arrow{
 
-.pageObjectif .lesObjectifs .plateformeEchange{
+    background-color: #20201f;
 
-    position:relative;
-    width:200px;
-    height:100px;
-    left:50%;
-    margin-left:-100px;
+}
+.arrow .spaceArrow img{
+
+    margin:0 auto;
+
+}
 
 
+.arrow .spaceArrow{
+    float: left;
+    width: 33%;
+    height: 24px;
+}
+
+.objectifTexts{
+    background-color: rgb(32, 32, 31);
+}
+
+
+.objectifTexts .objectifText {
+
+    width: 85%;
+    margin:0 auto;
+    padding-bottom: 50px;
+
+}
+
+.objectifTexts .objectifText p{
+
+    float:left;
+    padding-top: 25px;
+    width: 60%;
+
+}
+
+.objectifTexts .objectifText .imageObjectif{
+    width: 40%;
+    float:left;
+}
+
+.echange, .actu, .participatif{
+    display:none;
+
+}
+
+.echange.activ, .actu.activ, .participatif.activ {
+
+    display: block;
 }

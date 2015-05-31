@@ -8,7 +8,7 @@
 	<body>
         <?php
 		include 'Fixes/header.php';
-		include 'Fixes/footer.php';
+		/*include 'Fixes/footer.php';*/
 
 		?>
 
