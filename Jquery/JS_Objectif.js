@@ -15,5 +15,27 @@ function start(){
         $('.'+element).addClass('activ'); //le "." sélectionne une classe comme en css
     });
 
+     $('.iconObjectif').click(function(){
+     $(this).attr('src', $(this).attr('src').replace('.png', 'Activ.png'));
+
+
+});
+
+/*$('.iconObjectif').onClick(function(){
+$(this).attr('src', $(this).attr('src').replace('Activ.png', '.png'));
+
+
+});*/
+
+
+
+
+
+
+
+
+
+
+
 
 }

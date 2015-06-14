@@ -21,6 +21,10 @@ class Utilisateur {
         }
     }
 
+
+                            /* VERIFIER SI LE PSEUDO EXISTE OU NON */
+
+
     public function pseudoAlreadyExist() {
 
         $pseudoAlreadyExist = true;
@@ -38,6 +42,9 @@ class Utilisateur {
         }
         return $pseudoAlreadyExist;
     }
+
+
+                                /*INSERER NOUVEL UTILISATEUR DANS LA DB*/
 
     public function insertNewUserInDb() {
 
@@ -62,6 +69,9 @@ class Utilisateur {
 
     }
 
+                        /* ON RECUPERE LES INFORMATIONS DU USERS PAR SON PSEUDO*/
+
+
     public static function getUserByPseudo($pseudo) {
         include 'libs/db.php';
         $query = $connexion->prepare('SELECT * FROM users WHERE pseudo = :pseudo ;');
@@ -78,6 +88,9 @@ class Utilisateur {
         return $userByPseudo;
 
     }
+
+
+                        /* VERIFICATION DU PASSWORD*/
 
     public function checkPassWord($passWord) {
         return ($passWord == $this->passWord);

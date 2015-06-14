@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
         );
         $newUser->setUserInfos($userInfos);
         $newUser->insertNewUserInDb();
+        header('location:/OculusGeek/accueil.php');
+        
     }
 }
 

@@ -1,4 +1,15 @@
 /*************************************OBJECTIF************************************************************************/
+.pageObjectif .titre_Ob{
+
+    color:rgb(61, 60, 58);
+    width: 14%;
+    margin:auto;
+    padding-top: 5%;
+    padding-bottom:5%;
+    font-size:80%;
+
+}
+
 .objectifIcons{
     padding-bottom: 30px;
 }
@@ -24,6 +35,8 @@
 
     text-align: center;
     font-size: 20px;
+    color:rgb(224, 130, 36);
+
 
 
 }
@@ -63,6 +76,7 @@
     float:left;
     padding-top: 25px;
     width: 60%;
+    color:rgb(244, 238, 231)
 
 }
 

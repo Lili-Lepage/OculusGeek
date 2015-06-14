@@ -142,150 +142,44 @@ header #titre {
 /***********************************************FOOTER*********************************************************************************/
 
 footer{
-    background-color:#222222;
+    background-color: rgba(24, 24, 24, 0.89);
+    width: auto;
+    height: auto;
+    margin:auto;
+
+
+}
+
+.basGauche{
+    width: 50px;
+    display: block;
     position: relative;
-  clear:both;
-  margin-top: -150px;
-  height: 150px
-
-
-}
-
-.icones li {
-
-    display:inline;
+    left:90px;
 }
 
 
-.contact{
+.menuFooter{
 
-    position: absolute;
-    color: #ededed;
-    font-size:90%;
-    position:absolute;
-        top:15%;
-        right:8%;
-}
-
-.contact a{
-    text-decoration: none;
-    color:#f0e1df;
-
-}
-
-.contact a:hover {
-
-    color:#d86132;
-    font-style: italic;
-}
-
-.partenaires{
-
-    font-size:90%;
-    color: #ededed;
-    position:absolute;
-        top:15%;
-        left:8%;
-
-}
-
-.partenaires a{
-    text-decoration: none;
-    color:#f0e1df;
-
-}
-
-.partenaires a:hover {
-
-    color:#d86132;
-    font-style: italic;
+    display: block;
+    width: auto;
+    position: relative;
+        left:1050px;
 }
 
 
 .copyright{
 
-        color: #ededed;
-        font-size:80%;
-        position: absolute;
-            bottom:77%;
-            left:35%;
-
-}
-
-.mentions{
-
-    background-color:#1a1a1a;
-
-}
-
-.mentions a{
-    text-decoration: none;
-    color:#fefefe;
-}
-
-.mentions a:hover{
-
-    color:#d86132;
-    font-style: italic;
-}
-
-.Conn{
-    color:#fefefe;
-    text-decoration: none;
-    position:absolute;
-        top:5%;
-        left:20%;
-}
-
-.Conn a{
-    text-decoration: none;
-    color:#fefefe;
-}
-
-.Conn a:hover{
-
-    color:#d86132;
-    font-style: italic;
+    display: inline;
+    position: relative;
+    left: 510px;
 
 }
 
 
 
 
-.Ins{
-    color:#fefefe;
-    text-decoration: none;
-    position:absolute;
-        top:5%;
-        right:20%;
-}
 
-.Ins a{
-    text-decoration: none;
-    color:#fefefe;
-}
-
-.Ins a:hover{
-
-    color:#d86132;
-    font-style: italic;
-
-}
-
-.lien1{
-
-    padding-left:10%;
-
-}
-
-.lien2{
-padding:1%;
-/*Border-Style: solid;
-Border-Color: Silver;
-Border-Width: 1pt;*/
-background-color:#686868;
-}
-
+/******************************************CLEAR AFTER***************************************************/
 .clear:after {
     content:"";
     display: block;

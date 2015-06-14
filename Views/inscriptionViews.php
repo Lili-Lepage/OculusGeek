@@ -68,6 +68,5 @@
             </table>
         </form>
 
-        <?php include 'Fixes/footer.php'; ?>
     </body>
 </html>
