@@ -3,13 +3,19 @@
 
 /******************************************************************/
 
+html, body{
 
+  height: 100%;
+}
 body{
 
     font-family: 'Source San Pro', sans-serif;
     margin:0;
     padding:0;
     font-size: 12pt;
+    display : table;
+    width: 100%;
+
 
 }
 
@@ -153,18 +159,21 @@ header .O {
     z-index: 1;
     font-family:'13_Misa','Bit Trip7 (sRB)', 'calibri', sans-serif;
     font-size: 5em;
-    color:rgb(23, 22, 23);
+    color:rgb(29, 29, 29)
   }
 
 /***********************************************FOOTER*********************************************************************************/
 
 footer{
     background-color: rgba(24, 24, 24, 0.89);
-    width: auto;
+    display : table-row;
+    width: 2000px;
     height: auto;
     margin:auto;
-    position: relative;
-    top:600px;
+    position: absolute;
+    bottom: 0;
+
+
 
 
 }

@@ -59,6 +59,7 @@
                   <div class="copy">
                         <a href="#">Mention légales</a> | © Oculus Geek
                   </div>
+                  <div class="clear"></div>
                 </div>
 
 

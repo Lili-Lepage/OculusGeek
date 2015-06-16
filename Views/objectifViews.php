@@ -5,7 +5,7 @@
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
 
-		<title>Occulus_Geek</title>
+		<title>Occulus_Geek/objectif</title>
     </head>
 	<body>
 
@@ -17,7 +17,9 @@
 
 		<div class="pageObjectif"> <!--page entière-->
 
-			<div class="titre_Ob"><h1>Notre Objectif</h1></div>
+		
+							<div class="titre_Ob"><h1>Notre Objectif</h1></div>
+
 
 				<div class="objectifIcons"> <!--Div contenant mes 3 icônes-->
 					<div class="objectifIcon"> <!-- Les 3 icônes-->
