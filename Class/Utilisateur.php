@@ -1,4 +1,9 @@
 <?php
+
+//Regroupe de toutes les fonctons utiles pour toutes les actions touchant les utilisateurs
+
+
+
 class Utilisateur {
 
     private $userId;
@@ -15,9 +20,9 @@ class Utilisateur {
     public function __construct(){
     }
 
-    public function setUserInfos($infos = array()) {
+    public function setUserInfos($infos = array()) {  //récupération des infos du user dans la DB
         foreach($infos as $info => $infoValue) {
-            $this->$info = $infoValue; //Je ne pensais pas que ça marcherais mais tant mieux.
+            $this->$info = $infoValue;
         }
     }
 
@@ -30,13 +35,15 @@ class Utilisateur {
         $pseudoAlreadyExist = true;
         if (isset($this->pseudo)) {
 
-            include 'libs/db.php';
+            include 'libs/db.php'; //fonction connexion à la DB
             $query = $connexion->prepare('SELECT pseudo FROM users WHERE pseudo = :pseudo ;' ); // on peut remplacer :pseudo par titi
         	$query->bindValue(':pseudo', $this->pseudo); //toujours mettre bindValue = protection des données.
             $query->execute();
             $user = $query->fetch(PDO::FETCH_OBJ);
 
-            if (!is_object($user) || $user->pseudo != $this->pseudo) {//Si le pseudo trouvé en base et celui de l'objet sont les mêmes, on met la variable à true.
+
+            //Si le pseudo trouvé en base et celui de l'objet ne sont pas les mêmes ou que l'objet n'existe pas, on met la variable à false.
+            if (!is_object($user) || $user->pseudo != $this->pseudo) {
                 $pseudoAlreadyExist = false;
             }
         }
@@ -44,11 +51,14 @@ class Utilisateur {
     }
 
 
+
+
+
                                 /*INSERER NOUVEL UTILISATEUR DANS LA DB*/
 
     public function insertNewUserInDb() {
 
-        if (!$this->pseudoAlreadyExist()) {
+        if (!$this->pseudoAlreadyExist()) {      //si le pseudo n'existe pas
 
             include 'libs/db.php';
             $inscription=$connexion->prepare('INSERT INTO users (pseudo, passWord, firstName,lastName,birthDate,sexe,email,hobits,geekHobits)

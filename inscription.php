@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
 
-    if ($_POST['passWord'] == $_POST['passWordBis']) {
+    if ($_POST['passWord'] == $_POST['passWordBis']) { //on vérifie que le mdp est égal à la deuxième case (mdp validation) de l'inscription
         include 'Class/Utilisateur.php';
         $newUser = new Utilisateur();
         $userInfos = array(
@@ -17,8 +17,9 @@ if (isset($_POST['submit'])) {
         );
         $newUser->setUserInfos($userInfos);
         $newUser->insertNewUserInDb();
-        header('location:/OculusGeek/accueil.php');
-        
+
+        header('location:/OculusGeek/accueil.php'); //on renvoi à la page d'acceuil lorsque l'inscription a réussie
+
     }
 }
 

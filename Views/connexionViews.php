@@ -3,7 +3,8 @@
     	<head>
     		<meta charset= "UTF-8" />
     		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
-    		<title>Occulus_Geek</title>
+      
+    		<title>Occulus_Geek_connexion</title>
 
     </head>
 
@@ -11,7 +12,7 @@
 
 <?php include 'Fixes/header.php'; ?>
 
-
+<div class="FormCon">
     <form action="" method="post">
 
         <p>Login</p> <br />
@@ -23,5 +24,6 @@
         <input type="submit" value="Valider" name="valider"/>
 
     </form>
+</div>
 
 </body>

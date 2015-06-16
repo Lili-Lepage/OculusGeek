@@ -3,11 +3,12 @@
         <a href="/OculusGeek/accueil.php"><img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/image_entete.png'?>" /></a>
     </div>
     <div id="titre">
-        <h1>Oculus Geek</h1>
+        <h1 class="O">O</h1>
+        <h1 class="titre">culus Geek</h1>
     </div>
     <nav class="menuTop">
         <ul class="menu">
-            <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php"><div class="menuLinkContent">Acceuil</div></a></li>
+            <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php"><div class="menuLinkContent">Accueil</div></a></li>
             <li class="itemMenu"><a class="menuLink" href="/OculusGeek/objectif.php"><div class="menuLinkContent">Notre objectif</div></a>
             <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">A la pointe de la technologie</div></a>
                 <ul class="subMenu">
