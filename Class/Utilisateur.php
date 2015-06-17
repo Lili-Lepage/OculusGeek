@@ -17,8 +17,7 @@ class Utilisateur {
     private $hobits = '';
     private $geekHobits = '';
 
-    public function __construct(){
-    }
+  //  public function __construct(){    }
 
     public function setUserInfos($infos = array()) {  //récupération des infos du user dans la DB
         foreach($infos as $info => $infoValue) {

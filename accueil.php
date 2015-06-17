@@ -2,4 +2,5 @@
 
 <?php
 include 'Views/accueilViews.php';
+
 ?>

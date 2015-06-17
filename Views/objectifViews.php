@@ -9,7 +9,8 @@
     </head>
 	<body>
 
-		<?php include 'Fixes/header.php'; ?>
+		<?php include 'Views/headerViews.php'; ?>
+		
 <!--***********************************CONTENU*******************************************************-->
 
 <!-- Mettre la même div class aux éléments qui doivent avoir le même skin-->
@@ -17,7 +18,7 @@
 
 		<div class="pageObjectif"> <!--page entière-->
 
-		
+
 							<div class="titre_Ob"><h1>Notre Objectif</h1></div>
 
 

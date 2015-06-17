@@ -4,19 +4,16 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<title>Occulus_Geek</title>
-    </head>
-	<body>
-
-
-
-        <?php
-		include 'Fixes/header.php';
-		include 'Fixes/footer.php';
-
+		<?php
+			include 'Views/headerViews.php';
 		?>
+  </head>
+	<body>
+	<img src="images/technologies.png"/></br>
 
-	<!--<img src="images/technologies.png"/>-->
 
 
 	    </body>
+
+	<?php include 'footer.php'; ?>
 </html>

@@ -2,17 +2,20 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
+		
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<title>Occulus_Geek</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+
 		<script>
 			webshims.setOptions('forms-ext', {types: 'date'});
 			webshims.polyfill('forms forms-ext');
 		</script>
+
     </head>
 	<body>
-        <?php include 'Fixes/header.php'; ?>
+        <?php include 'Views/headerViews.php'; ?>
 
         <form action="" method="post">
             <table>
@@ -56,11 +59,11 @@
                 </tr>
                 <tr>
                     <td>Loisirs</td>
-                    <td><input type="text" name="hobits" placeholder="qu aimez vous ?" /></td>
+                    <td><textarea type="text" name="hobits">qu aimez vous ?</textarea></td>
                 </tr>
                 <tr>
                     <td>Centres d"interets technologiques</td>
-                    <td><input type="text" name="geekHobits" placeholder="Quels sujets t&#8217interessent ?"/></td>
+                    <td><textarea type="text" name="geekHobits" height="80px" maxlength="100">Quels sujets t&#8217interessent ?</textarea></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Valider" name="submit"></td>

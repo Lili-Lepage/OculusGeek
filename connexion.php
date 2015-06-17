@@ -2,10 +2,10 @@
 <?php
 
 
-    //design de la page
-    include 'Views/connexionViews.php';
 
+include 'Views/headerViews.php';
 
+$con=false;
     include 'Class/Utilisateur.php';
     $user=Utilisateur::getUserByPseudo($_POST['login']);
     if (is_object($user)) {
@@ -15,7 +15,9 @@
 
             $_SESSION["login"] = $user->pseudo;
 
-            header('location:/OculusGeek/accueil.php');// renvoie à la page d'acceuil
+            $con=true;
+
+            //header('location:/OculusGeek/accueil.php');// renvoie à la page d'acceuil
 
 
 
@@ -23,6 +25,8 @@
             echo "mauvais pseudo ou mot de passe";
         }
     }
+
+    include 'Views/connexionViews.php';
 
 
 
