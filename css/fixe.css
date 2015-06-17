@@ -41,9 +41,7 @@ header {
 header .menuTop {
     position:absolute;
     width: 100%;
-    bottom: 0px;
-    border-top: 1px ridge;
-    border-bottom: 1px ridge;
+    bottom: 3px;
     background-color:rgba(24, 24, 24, 0.89);
     z-index:1;
 }
@@ -182,7 +180,7 @@ header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu .subMenuLink .subMen
  /**************************TITRE***********************************************/
 
 header .titre {
-   position: fixed;
+    position: fixed;
     position: absolute;
     top: 395px;
     left: 130px;
@@ -197,6 +195,8 @@ header .titre {
 
 
 header .O {
+
+    position: fixed;
     position: absolute;
     top: 350px;
     left: 65px;
@@ -209,12 +209,13 @@ header .O {
 /***********************************************FOOTER**********************************FOOTER****************************FOOTER************************************************/
 
 footer {
-    background-color: rgba(24, 24, 24, 0.89);
+    background-color: rgba(4, 4, 4, 0.89) ;
     /*display : table-row;*/
     height:300px;
     position: relative;
     top: 80px;
     z-index:1;
+
 
 }
 
@@ -334,7 +335,7 @@ font-style: italic;
 color:rgb(228, 119, 18);
 width: 33%;
 position: absolute;
-right: 300px;
+right: 330px;
 font-size:20px;
 }
 

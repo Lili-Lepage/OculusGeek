@@ -10,7 +10,7 @@
 	<body>
 
 		<?php include 'Views/headerViews.php'; ?>
-		
+
 <!--***********************************CONTENU*******************************************************-->
 
 <!-- Mettre la même div class aux éléments qui doivent avoir le même skin-->
