@@ -10,7 +10,7 @@
   </head>
 
   <body>
-
+  	<?php	include 'header.php'; ?>
     <form action='' method='post'>
         <p>
             <input id="articleTitle" type='text' name='nom_article' placeholder='titre de l&#8217article'/>

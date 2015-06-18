@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 if (isset($_POST['submit'])) {
 
     if ($_POST['passWord'] == $_POST['passWordBis']) { //on vérifie que le mdp est égal à la deuxième case (mdp validation) de l'inscription

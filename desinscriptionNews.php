@@ -1,6 +1,6 @@
-
-
 <?php
+
+session_start();
 
 include 'Views/headerViews.php';
 include 'Views/desinscriptionNewsViews.php';

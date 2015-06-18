@@ -187,8 +187,8 @@ header .titre {
     z-index: 1;
     font-family:'Agency FB','Bit Trip7 (sRB)', 'calibri', sans-serif;
     font-size:3em;
-    color:rgb(36, 35, 36);
-    text-shadow: 1px 1px rgb(50, 49, 49);
+    color:rgb(33, 31, 33);
+    text-shadow: 1px 1px rgb(135, 128, 128);
 
 }
 
@@ -203,7 +203,8 @@ header .O {
     z-index: 1;
     font-family:'13_Misa','Bit Trip7 (sRB)', 'calibri', sans-serif;
     font-size: 5em;
-    color:rgb(29, 29, 29)
+    color:rgb(33, 31, 33);
+    text-shadow: 1px 1px rgb(181, 171, 171);
   }
 
 /***********************************************FOOTER**********************************FOOTER****************************FOOTER************************************************/

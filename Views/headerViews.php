@@ -1,10 +1,14 @@
+<head>
+  <meta charset="utf-8" />
+</head>
+
 <header>
+
+
     <div class="baniere">
-      <img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/baniere_3.jpg'?>" />
+      <img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/baniere/oculusGeek.png'?>" />
     </div>
-    <div id="titre">
-        <a href="/OculusGeek/accueil.php"><h1 class="O">O</h1></a>
-        <a href="/OculusGeek/accueil.php"><h1 class="titre">culus Geek</h1></a>
+
     </div>
     <nav class="menuTop">
         <ul class="menu">
@@ -30,12 +34,20 @@
 
 
 
-
-
-    <!--<nav class="C_I">
+    <?php if ($con) {  // si l'utilisateur est connecté afficher mon compte et deconnexion ?>
+      <nav class="D_MC">
         <ul>
-            <li><a href="/OculusGeek/connexion.php"><div class="btnC_I">Connexion</div></a></li>
-            <li><a href="/OculusGeek/inscription.php"><div class="btnC_I">Inscription</div></a></li>
+          <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
+          <li><a href="/OculusGeek/Views/compteViews.php"><div class="btnD_C">Mon compte</div></a></li>
         </ul>
-    </nav>-->
+      </nav>
+    <?php } else {?>
+      <nav class="C_I">
+        <ul>
+          <li><a href="/OculusGeek/connexion.php"><div class="btnC_I">Connexion</div></a></li>
+          <li><a href="/OculusGeek/inscription.php"><div class="btnC_I">Inscription</div></a></li>
+        </ul>
+      </nav>
+
+    <?php }?>
 </header>

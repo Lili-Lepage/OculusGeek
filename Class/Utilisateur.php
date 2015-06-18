@@ -22,6 +22,7 @@ class Utilisateur {
     public function setUserInfos($infos = array()) {  //récupération des infos du user dans la DB
         foreach($infos as $info => $infoValue) {
             $this->$info = $infoValue;
+
         }
     }
 
