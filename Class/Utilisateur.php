@@ -37,7 +37,7 @@ class Utilisateur {
 
             include 'libs/db.php'; //fonction connexion à la DB
             $query = $connexion->prepare('SELECT pseudo FROM users WHERE pseudo = :pseudo ;' ); // on peut remplacer :pseudo par titi
-        	$query->bindValue(':pseudo', $this->pseudo); //toujours mettre bindValue = protection des données.
+           	$query->bindValue(':pseudo', $this->pseudo); //toujours mettre bindValue = protection des données.
             $query->execute();
             $user = $query->fetch(PDO::FETCH_OBJ);
 

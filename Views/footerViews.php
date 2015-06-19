@@ -4,21 +4,21 @@
 
                 <div class="basGauche">
                     <!--<ul class="icones">
-                        <li><img class ="Ico" src="images/icones/facebook.png" width="70px" height="70px"/></li>
-                        <li><img class="Ico" src="images/icones/twitter.png" width="45px" height="45px"/></li>
-                        <li><img class ="Ico" src="images/icones/google+.png" width="60px" height="60px"/></li>
+                        <li><img class ="Ico" src="images/icones/fb.png" /></li>
+                        <li><img class="Ico" src="images/icones/twit.png" /></li>
+                        <li><img class ="Ico" src="images/icones/goo.png"/></li>
                     </ul>-->
 
 
                     <div class="contact">
-                        <a href="#">Contactez-nous</a>
+                      <a href="#">Contactez-nous</a>
                     </div>
 
 
                     <div class ="partenaires">
-                        <a href="#">Nos partenaires</a>
+                      <a href="#">Nos partenaires</a>
                     </div>
-                <div class="clear"></div>
+                    <div class="clear"></div>
                 </div>
 
 
@@ -35,11 +35,20 @@
                 </div>
 
                 <div class ="InscN">
-                    <div class="champs">
-                      <?php if ($singed) {    //si la personne est éjà inscrite  ?>
-                        <div class="phrase">Vous êtes déjà inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
 
-                      <?php } else {  //si elle n'est pas encore inscrite on lance le formulaire  ?>
+
+
+                    <div class="champs">
+                      <?php if(!$con){   ?>
+                            <div class="phrase">vous devez être inscris ou connecté pour vous inscrire à notre News Letter </div>
+                      <?php } else { ?>
+
+                      <?php if (isset($_SESSION['login']));{ ?>
+
+                          <?php if ($singed) {    //si la personne est éjà inscrite  ?>
+                          <div class="phrase">Vous êtes déjà inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
+
+                          <?php } else {  //si elle n'est pas encore inscrite on lance le formulaire  ?>
 
                       <div class="Newsletter"> Newsletter</div>
                         <form method="post" action="#">
@@ -47,6 +56,12 @@
                       		<input type="submit" name="submit" value="je m'inscris" />
                       	</form>
                       <?php } ?>
+                <?php } ?>
+              <?php } ?>
+
+
+
+
                     </div>
                     <div class="clear"></div>
                 </div>

@@ -1,17 +1,24 @@
 <!doctype html>
 <html lang="fr">
 	<head>
-		<meta charset="utf-8" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+		<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
+		<meta charset="utf-8" />
+
 		<title>Occulus_Geek</title>
 
   </head>
-	<body>
 		<?php	include 'header.php'; ?>
+	<body>
 
 
 
 
-		<?php include 'footer.php'; ?>
+<div class="contenu">Oculus Geek</div>
+
+
+
+
   </body>
+		<?php include 'footer.php'; ?>
 </html>

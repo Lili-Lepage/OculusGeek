@@ -5,7 +5,7 @@
 
 $con = false;
 
-if (isset($_SESSION['login'])) { 
+if (isset($_SESSION['login'])) {
   $con = true;
 }
 include 'Views/headerViews.php';

@@ -1,3 +1,30 @@
+/*****************************************************************************************************************/
+@import url(http://fonts.dafont.com/css?family=Prestige Elite Std:300,400,700|Play:400,700);
+
+
+
+/*********************************************ACCUEIL***************************************************************/
+
+
+.contenu{
+
+font-size: 300px;
+width: 80%;
+position: relative;
+left:20%;
+color: rgb(126, 126, 126);
+opacity: 0.1;
+   filter:alpha(opacity=50);
+   -moz-opacity:0.5;
+
+}
+
+
+
+
+
+
+
 
 
 /*************************************OBJECTIF************************************************************************/
@@ -9,11 +36,12 @@
 
 h1{
 
-  width: 200px;
+  width: 300px;
   position:relative;
-  left:850px;
+  left:50%;
   top: 60px;
   margin-bottom:200px;
+  font-family:'Prestige Elite Std';
 
 }
 
@@ -21,13 +49,12 @@ h1{
 .pageObjectif .titre_Ob{
 
     color:rgb(61, 60, 58);
-  
+
     /*margin:auto;
     padding-top: 5%;
     padding-bottom:5%;*/
-    font-size:80%;
 
-
+    width: 80%;
 }
 
 .objectifIcons{
@@ -123,5 +150,26 @@ h1{
 
 border-width: 2px;
 border-color: rgb(8, 9, 9);
+
+}
+
+
+/***************************************************************************CREER ARTICLE*******************************************************/
+.creerArticle{
+
+  width: 35%;
+  position: relative;
+  left: 33%;
+  display: block;
+
+
+}
+
+.titreArticle{
+  color:rgb(30, 31, 30);
+  position: relative;
+  left:33%;
+  width: 5%;
+  margin-bottom:25px;
 
 }

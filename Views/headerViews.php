@@ -1,12 +1,13 @@
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 </head>
 
 <header>
 
 
     <div class="baniere">
-      <img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/baniere/oculusGeek.png'?>" />
+      <img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/baniere/oculusGeek2.png'?>" />
     </div>
 
     </div>
@@ -38,14 +39,14 @@
       <nav class="D_MC">
         <ul>
           <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
-          <li><a href="/OculusGeek/Views/compteViews.php"><div class="btnD_C">Mon compte</div></a></li>
+          <li><a href="/OculusGeek/compte.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a></li>
         </ul>
       </nav>
     <?php } else {?>
       <nav class="C_I">
         <ul>
           <li><a href="/OculusGeek/connexion.php"><div class="btnC_I">Connexion</div></a></li>
-          <li><a href="/OculusGeek/inscription.php"><div class="btnC_I">Inscription</div></a></li>
+          <li><a href="/OculusGeek/inscription.php"><div class="btnC_I">Inscription  </div></a></li>
         </ul>
       </nav>
 
