@@ -1,4 +1,4 @@
-<?session_start();?>
+<?php session_start();?>
 
 <?php
 
@@ -11,7 +11,6 @@ echo date('d/m/Y', time());
 $monArticle=new Article;
 
 $monArticle->ecritureArticle();
-
 
 ?>
 

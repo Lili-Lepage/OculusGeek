@@ -1,5 +1,7 @@
 <?php
 
+
+
 	$singed = false; //variable désignant si une personne est inscrite ou non
 
 	if (isset($_POST['email']) && isset($_POST['submit'])) {

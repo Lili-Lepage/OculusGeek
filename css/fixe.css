@@ -50,6 +50,7 @@ header .menuTop .menu .itemMenu /*mode d'apparition des liens*/
     display: inline-block;
     text-shadow: 3px 3px 6px #000000;
     position:relative;
+    left:25px;
     border-bottom: 5px solid transparent;
     width: 16%;
 }
@@ -137,8 +138,7 @@ header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu .subMenuLink .subMen
 
 
 
-
-/**************************************DECONNEXION MON COMPTE*******************/
+/**************************************DECONNEXION MON COMPTE ARTICLE*******************/
 
 
 
@@ -173,9 +173,45 @@ header .menuTop .menu .itemMenu:hover .subMenu .itemSubMenu .subMenuLink .subMen
 }
 
 
+.BA {
+
+  position: absolute;
+  text-align:right;
+  z-index: 1;
+  margin: 2%;
+  top: 40px;
+  right: 0px;
+}
 
 
+.BA ul li{
+  display: inline-block;
+  font-size:80%;
+  text-shadow: 2px 2px 4px #000000;
 
+}
+
+
+.BA ul a /*apparence des liens*/
+{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+
+.BA ul a .btnD_A {
+    background-color:rgba(33, 33, 33, 0.85);
+    width: 204px;
+    text-align: center;
+    position: relative;
+    right:0px;
+    padding: 5% 0px;
+    color: #FFF;
+}
+
+.BA ul a .btnD_A:hover{
+  background-color: #353535;
+}
 
  /**************************TITRE***********************************************/
 

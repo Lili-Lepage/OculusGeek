@@ -3,6 +3,7 @@
     	<head>
     		<meta charset= "UTF-8" />
     		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+        		<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
 
     		<title>Occulus_Geek_connexion</title>
 
@@ -13,13 +14,14 @@
   <div class="FormCon">
       <form action="" method="post">
 
-          <p>Login</p> <br />
-              <input type="text" name="login" /><br />
 
-          <p>Mot de passe</p>
-              <input type="password" name="MDP" /><br />
+              <div class="login"><input type="text" name="login" placeholder="login" /><br /></div>
+              <div class="MDP"><input type="password" name="MDP" placeholder="mot de passe" /><br /></div>
 
-          <input type="submit" value="Valider" name="valider"/>
+
+      <input type="submit" value="Login" name="valider"/>
+
+      <div class="MDPforgot"><a href="#">mot de passe oublié</a></div>
 
 
 

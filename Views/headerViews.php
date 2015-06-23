@@ -36,12 +36,20 @@
 
 
     <?php if ($con) {  // si l'utilisateur est connecté afficher mon compte et deconnexion ?>
-      <nav class="D_MC">
+    <nav>
+      <div class="D_MC">
         <ul>
           <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
           <li><a href="/OculusGeek/compte.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a></li>
-        </ul>
-      </nav>
+       </ul>
+     </div>
+     <div class="BA">
+       <ul>
+         <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_A">Créer un article</div></a></li>
+       </ul>
+    </div>
+
+   </nav>
     <?php } else {?>
       <nav class="C_I">
         <ul>

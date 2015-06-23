@@ -39,14 +39,14 @@
 
 
                     <div class="champs">
-                      <?php if(!$con){   ?>
-                            <div class="phrase">vous devez être inscris ou connecté pour vous inscrire à notre News Letter </div>
-                      <?php } else { ?>
+
 
                       <?php if (isset($_SESSION['login']));{ ?>
 
                           <?php if ($singed) {    //si la personne est éjà inscrite  ?>
-                          <div class="phrase">Vous êtes déjà inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
+
+
+                          <div class="phrase">Vous êtes inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
 
                           <?php } else {  //si elle n'est pas encore inscrite on lance le formulaire  ?>
 
@@ -57,7 +57,7 @@
                       	</form>
                       <?php } ?>
                 <?php } ?>
-              <?php } ?>
+
 
 
 

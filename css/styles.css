@@ -1,6 +1,35 @@
 /*****************************************************************************************************************/
 @import url(http://fonts.dafont.com/css?family=Prestige Elite Std:300,400,700|Play:400,700);
 
+/*********************************************CONNEXION************************************************************/
+
+.FormCon{
+
+
+  position: relative;
+  left: 35%;
+  width: 22%;
+  background: rgb(55, 55, 55);
+  padding:2%;
+  text-align: center;
+  margin-bottom:100px;
+  color:rgb(233, 128, 31);
+  }
+
+
+
+.MDP{
+  position: relative;
+  top:34px;
+  margin-bottom: 65px;
+}
+
+.MDP p{
+  position: relative;
+  bottom:15px;
+}
+
+
 
 
 /*********************************************ACCUEIL***************************************************************/
@@ -8,14 +37,14 @@
 
 .contenu{
 
-font-size: 300px;
-width: 80%;
-position: relative;
-left:20%;
-color: rgb(126, 126, 126);
-opacity: 0.1;
-   filter:alpha(opacity=50);
-   -moz-opacity:0.5;
+  font-size: 300px;
+  width: 80%;
+  position: relative;
+  left:20%;
+  color: rgb(126, 126, 126);
+  opacity: 0.1;
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
 
 }
 

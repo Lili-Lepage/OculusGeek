@@ -21,7 +21,7 @@ include 'Views/desinscriptionNewsViews.php';
     echo'<script type="text/javascript">window.alert("'.$messageD.'");</script>';
 
    }
- }
+ 
 
 
 

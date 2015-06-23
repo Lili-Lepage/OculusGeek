@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$messageIns="problème de champs";
 
 if (isset($_POST['submit'])) {
 
@@ -27,7 +27,13 @@ if (isset($_POST['submit'])) {
         header('location:/OculusGeek/accueil.php'); //on renvoi à la page d'acceuil lorsque l'inscription a réussie
 
     }
+
+    else {
+    echo'<script type="text/javascript">window.alert("'.$messageIns.'");</script>';
+    }
   }
+
+
 
 
 
