@@ -19,7 +19,7 @@
               <div class="MDP"><input type="password" name="MDP" placeholder="mot de passe" /><br /></div>
 
 
-      <input type="submit" value="Login" name="valider"/>
+    <input class="valider" type="submit" value="Login" name="valider"/>
 
       <div class="MDPforgot"><a href="#">mot de passe oublié</a></div>
 

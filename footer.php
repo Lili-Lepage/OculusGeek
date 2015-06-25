@@ -1,6 +1,15 @@
 <?php
 
+//Vérifie que le user est connecté pour afficher "mon compte" "deconnexion" même principe que sur le header
 
+$con = false;
+
+if (isset($_SESSION['login'])) {
+  $con = true;
+}
+
+
+// Inscription à la News Letter
 
 	$singed = false; //variable désignant si une personne est inscrite ou non
 

@@ -106,5 +106,8 @@ class Utilisateur {
         return ($passWord == $this->passWord);
     }
 
+
+  
+
 }
 ?>

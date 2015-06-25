@@ -8,7 +8,7 @@
       <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
       <title>Occulus_Geek</title>
       <script type="text/javascript" src="Jquery/jquery-2.1.4.min.js"></script>
-      <script type="text/javascript" src="js/Article.js"></script>
+      <script type="text/javascript" src="Jquery/Article.js"></script>
 
   </head>
 

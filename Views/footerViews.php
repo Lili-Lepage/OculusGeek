@@ -21,18 +21,25 @@
                     <div class="clear"></div>
                 </div>
 
+                <?php if ($con) {  // si l'utilisateur est connecté afficher mon compte et deconnexion ?>
+                <nav class="L_F">
+                    <ul>
+                      <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_F">Deconnexion</div></a></li>
+                      <li><a href="/OculusGeek/compte.php"><div class="btnD_F">Mon compte : <?php echo $_SESSION['login']; ?></div></a></li>
+                   </ul>
 
 
-                <div class="logReg">
-                    <div class="login">
-                      <a href="/OculusGeek/connexion.php">Login</a>
-                    </div>
+               </nav>
+                <?php } else {?>
+                  <nav class="L_F">
+                    <ul>
+                      <li><a href="/OculusGeek/connexion.php"><div class="btnC_F">Connexion</div></a></li>
+                      <li><a href="/OculusGeek/inscription.php"><div class="btnC_F">Inscription  </div></a></li>
+                    </ul>
+                  </nav>
 
-                    <div class="register">
-                      <a href="/OculusGeek/inscription.php">Register</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
+
+                <?php }?>
 
                 <div class ="InscN">
 
@@ -55,8 +62,8 @@
                       		<input type="*" name='email' placeholder="email"  size="30" maxlength="100" />
                       		<input type="submit" name="submit" value="je m'inscris" />
                       	</form>
+                        <?php } ?>
                       <?php } ?>
-                <?php } ?>
 
 
 
@@ -67,7 +74,7 @@
                 </div>
 
 
-                <nav class="menuFooter">
+              <!--  <nav class="menuFooter">
                     <ul class="menu">
                         <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php">Accueil</a></li>
                         <li class="itemMenu"><a class="menuLink" href="/OculusGeek/objectif.php">Notre objectif</a></li>
@@ -76,12 +83,12 @@
                         <li class="itemMenu"><a class="menuLink" href="#">Leurs expériences</a></li>
                         <li class="itemMenu"><a class="menuLink" href="#">Forum</a></li>
                     </ul>
-                </nav>
+                </nav>-->
 
 
                 <div class="copyright">
                   <div class="copy">
-                    <a href="#">Mention légales</a> | © Oculus Geek
+                    <a href="#">Mentions légales</a> | © Oculus Geek
                   </div>
 
                 </div>

@@ -1,8 +1,7 @@
-<head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
-</head>
-
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+  </head>
 <header>
 
 
@@ -19,7 +18,7 @@
                 <ul class="subMenu">
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">ordinateur</div></a></li>
                     <li class="itemSubMenu"><a class="subMenuLink" class="menuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
-                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">objet connecté</div></a></li>
+                    <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">objets connectés</div></a></li>
                 </ul>
             </li>
             <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Espace gaming</div></a>
@@ -28,7 +27,7 @@
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
                 </ul>
             </li>
-            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Leurs expériences</div></a></li>
+            <li class="itemMenu"><a class="menuLink" href="leursExperiences.php"><div class="menuLinkContent">Leurs expériences</div></a></li>
             <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Forum</div></a></li>
         </ul>
     </nav>
@@ -45,7 +44,8 @@
      </div>
      <div class="BA">
        <ul>
-         <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_A">Créer un article</div></a></li>
+         <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_CA">Créer un article</div></a></li>
+         <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_GA">Gérer articles </div></a></li>
        </ul>
     </div>
 
@@ -59,4 +59,7 @@
       </nav>
 
     <?php }?>
+
+    <script type="text/javascript" src="Jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="Jquery/menuFixe.js"></script>
 </header>
