@@ -1,0 +1,157 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: users
+#------------------------------------------------------------
+
+CREATE TABLE users(
+        userID     int (11) Auto_increment  NOT NULL ,
+        pseudo     Char (25) ,
+        lastName   Char (25) ,
+        firstName  Char (25) ,
+        birthDate  Date ,
+        sexe       Char (25) ,
+        email      Char (25) ,
+        hobits     Varchar (25) ,
+        geekHobits Varchar (25) ,
+        passWord   Char (50) ,
+        id_adresse Int ,
+        nom_grade  Char (25) ,
+        emailId    Int ,
+        PRIMARY KEY (userID )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: adresse
+#------------------------------------------------------------
+
+CREATE TABLE adresse(
+        id_adresse  int (11) Auto_increment  NOT NULL ,
+        Ville       Char (25) ,
+        code_postal Int ,
+        adresse_1   Char (25) ,
+        adresse_2   Char (25) ,
+        tel         Int ,
+        PRIMARY KEY (id_adresse )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: statut
+#------------------------------------------------------------
+
+CREATE TABLE statut(
+        nom_grade    Char (25) NOT NULL ,
+        niveau_droit Int ,
+        PRIMARY KEY (nom_grade )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: articles
+#------------------------------------------------------------
+
+CREATE TABLE articles(
+        id_article   int (11) Auto_increment  NOT NULL ,
+        nom_article  Char (25) ,
+        date_article Date ,
+        contenu      Varchar (25) ,
+        PRIMARY KEY (id_article )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: catégorie_articles
+#------------------------------------------------------------
+
+CREATE TABLE categorie_articles(
+        id_categorie  int (11) Auto_increment  NOT NULL ,
+        nom_categorie Varchar (25) ,
+        PRIMARY KEY (id_categorie )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: newsLettersMails
+#------------------------------------------------------------
+
+CREATE TABLE newsLettersMails(
+        emailId int (11) Auto_increment  NOT NULL ,
+        email   Varchar (75) ,
+        userID  Int ,
+        PRIMARY KEY (emailId )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: messagerie
+#------------------------------------------------------------
+
+CREATE TABLE messagerie(
+        userID       Int NOT NULL ,
+        userID_users Int NOT NULL ,
+        PRIMARY KEY (userID ,userID_users )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: a ecrit
+#------------------------------------------------------------
+
+CREATE TABLE a_ecrit(
+        userID     Int NOT NULL ,
+        id_article Int NOT NULL ,
+        PRIMARY KEY (userID ,id_article )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: a pour
+#------------------------------------------------------------
+
+CREATE TABLE a_pour(
+        id_article   Int NOT NULL ,
+        id_categorie Int NOT NULL ,
+        PRIMARY KEY (id_article ,id_categorie )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: apparente
+#------------------------------------------------------------
+
+CREATE TABLE apparente(
+        id_categorie                    Int NOT NULL ,
+        id_categorie_categorie_articles Int NOT NULL ,
+        PRIMARY KEY (id_categorie ,id_categorie_categorie_articles )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: suit
+#------------------------------------------------------------
+
+CREATE TABLE suit(
+        userID       Int NOT NULL ,
+        id_categorie Int NOT NULL ,
+        PRIMARY KEY (userID ,id_categorie )
+)ENGINE=InnoDB;
+
+ALTER TABLE users ADD CONSTRAINT FK_users_id_adresse FOREIGN KEY (id_adresse) REFERENCES adresse(id_adresse);
+ALTER TABLE users ADD CONSTRAINT FK_users_nom_grade FOREIGN KEY (nom_grade) REFERENCES statut(nom_grade);
+ALTER TABLE users ADD CONSTRAINT FK_users_emailId FOREIGN KEY (emailId) REFERENCES newsLettersMails(emailId);
+ALTER TABLE newsLettersMails ADD CONSTRAINT FK_newsLettersMails_userID FOREIGN KEY (userID) REFERENCES users(userID);
+ALTER TABLE messagerie ADD CONSTRAINT FK_messagerie_userID FOREIGN KEY (userID) REFERENCES users(userID);
+ALTER TABLE messagerie ADD CONSTRAINT FK_messagerie_userID_users FOREIGN KEY (userID_users) REFERENCES users(userID);
+ALTER TABLE a_ecrit ADD CONSTRAINT FK_a_ecrit_userID FOREIGN KEY (userID) REFERENCES users(userID);
+ALTER TABLE a_ecrit ADD CONSTRAINT FK_a_ecrit_id_article FOREIGN KEY (id_article) REFERENCES articles(id_article);
+ALTER TABLE a_pour ADD CONSTRAINT FK_a_pour_id_article FOREIGN KEY (id_article) REFERENCES articles(id_article);
+ALTER TABLE a_pour ADD CONSTRAINT FK_a_pour_id_categorie FOREIGN KEY (id_categorie) REFERENCES categorie_articles(id_categorie);
+ALTER TABLE apparente ADD CONSTRAINT FK_apparente_id_categorie FOREIGN KEY (id_categorie) REFERENCES categorie_articles(id_categorie);
+ALTER TABLE apparente ADD CONSTRAINT FK_apparente_id_categorie_categorie_articles FOREIGN KEY (id_categorie_categorie_articles) REFERENCES categorie_articles(id_categorie);
+ALTER TABLE suit ADD CONSTRAINT FK_suit_userID FOREIGN KEY (userID) REFERENCES users(userID);
+ALTER TABLE suit ADD CONSTRAINT FK_suit_id_categorie FOREIGN KEY (id_categorie) REFERENCES categorie_articles(id_categorie);
