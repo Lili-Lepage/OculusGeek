@@ -107,7 +107,27 @@ class Utilisateur {
     }
 
 
-  
+
+//VERIFICATION SI USER DEJA INSCRIT A LA NEWS LETTER
+
+    /*public function isFollower() {
+
+      $isFollower = false;  //user pas encore inscrit
+
+      include 'libs/db.php';
+      $query = $connexion->prepare('SELECT * FROM newsLettersMails WHERE userId = :userId ;'); //on récupère l'id du user qui s'inscrit
+      $query->bindValue(':userId', $this->userId);
+      $query->execute();
+      $mail = $query->fetch(PDO::FETCH_OBJ);
+
+      if (is_object($mail)) {  //si le user existe bien, son inscription est réussis.
+        $isFollower = true;
+      }
+
+      return $isFollower;
+
+    }*/
+
 
 }
 ?>
