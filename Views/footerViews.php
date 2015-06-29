@@ -50,7 +50,7 @@
 
                       <?php if (isset($_SESSION['login']));{ ?>
 
-                          <?php if ($singed) {    //si la personne est éjà inscrite  ?>
+                          <?php if ($signed) {    //si la personne est déjà inscrite  ?>
 
 
                           <div class="phrase">Vous êtes inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
@@ -74,19 +74,7 @@
                 </div>
 
 
-              <!--  <nav class="menuFooter">
-                    <ul class="menu">
-                        <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php">Accueil</a></li>
-                        <li class="itemMenu"><a class="menuLink" href="/OculusGeek/objectif.php">Notre objectif</a></li>
-                        <li class="itemMenu"><a class="menuLink" href="#">A la pointe de la technologie</a></li>
-                        <li class="itemMenu"><a class="menuLink" href="#">Espace gaming</a></li>
-                        <li class="itemMenu"><a class="menuLink" href="#">Leurs expériences</a></li>
-                        <li class="itemMenu"><a class="menuLink" href="#">Forum</a></li>
-                    </ul>
-                </nav>-->
-
-
-                <div class="copyright">
+                  <div class="copyright">
                   <div class="copy">
                     <a href="#">Mentions légales</a> | © Oculus Geek
                   </div>
@@ -100,7 +88,7 @@
                 // après le point d'intérogation : si {..} (là on affiche la popup)
                 // après les deux points : else {...} (là on affiche rien)
                 ?>
-              <?=$singed ? '<script type="text/javascript">window.alert("'.$message.'");</script>' : ''?>
+              <?=$signed ? '<script type="text/javascript">window.alert("'.$message.'");</script>' : ''?>
 
 
         	</footer>

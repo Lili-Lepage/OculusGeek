@@ -110,7 +110,7 @@ class Utilisateur {
 
 //VERIFICATION SI USER DEJA INSCRIT A LA NEWS LETTER
 
-    /*public function isFollower() {
+    public function isFollower() {
 
       $isFollower = false;  //user pas encore inscrit
 
@@ -126,7 +126,7 @@ class Utilisateur {
 
       return $isFollower;
 
-    }*/
+    }
 
 
 }

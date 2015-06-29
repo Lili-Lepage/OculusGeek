@@ -41,8 +41,8 @@
           <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
           <li><a href="/OculusGeek/compte.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a>
               <ul class="D_MC_Sub">
-                <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_GA">Créer un article</div></a></li>
-                <li><a href="/OculusGeek/#"><div class="btnD_CA">Gérer articles </div></a></li>
+                <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_CA">Créer un article</div></a></li>
+              <!--  <li><a href="/OculusGeek/#"><div class="btnD_CA">Gérer articles </div></a></li>-->
               </ul>
           </li>
        </ul>
