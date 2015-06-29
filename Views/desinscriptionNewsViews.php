@@ -17,6 +17,4 @@
 
 
 
-
-
 <a href="/OculusGeek/accueil.php">accueil</a>

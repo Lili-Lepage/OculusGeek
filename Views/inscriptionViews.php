@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-
+		
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<title>Occulus_Geek</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 
     </head>
 	<body>
-        <?php include 'header.php'; ?>
+        <?php include 'Views/headerViews.php'; ?>
 
         <form action="" method="post">
             <table>

@@ -1,8 +1,4 @@
 <?php
-
-session_start();
-$messageIns="problème de champs";
-
 if (isset($_POST['submit'])) {
 
     if ($_POST['passWord'] == $_POST['passWordBis']) { //on vérifie que le mdp est égal à la deuxième case (mdp validation) de l'inscription
@@ -22,19 +18,10 @@ if (isset($_POST['submit'])) {
         $newUser->setUserInfos($userInfos);
         $newUser->insertNewUserInDb();
 
-
-
         header('location:/OculusGeek/accueil.php'); //on renvoi à la page d'acceuil lorsque l'inscription a réussie
 
     }
-
-    else {
-    echo'<script type="text/javascript">window.alert("'.$messageIns.'");</script>';
-    }
-  }
-
-
-
+}
 
 
 

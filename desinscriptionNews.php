@@ -1,8 +1,8 @@
+
+
 <?php
 
-session_start();
-
-include 'header.php';
+include 'Views/headerViews.php';
 include 'Views/desinscriptionNewsViews.php';
 
 
@@ -20,10 +20,7 @@ include 'Views/desinscriptionNewsViews.php';
 		$desinscription = true; //personne vient de s'inscrire
     echo'<script type="text/javascript">window.alert("'.$messageD.'");</script>';
 
-   }
- 
-
-
+ }
 
 
 
