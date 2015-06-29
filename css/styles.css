@@ -1,3 +1,82 @@
+/*****************************************************************************************************************/
+@import url(http://fonts.dafont.com/css?family=Prestige Elite Std:300,400,700|Play:400,700);
+
+/*********************************************CONNEXION************************************************************/
+
+.FormCon{
+
+  display: block;
+  position: relative;
+  left: 35%;
+  width: 22%;
+  background: rgb(55, 55, 55);
+   border:1px solid #000000;
+  padding:2%;
+  text-align: center;
+  margin-bottom:100px;
+  color:rgb(233, 128, 31);
+  }
+
+
+.barre{
+  width: 100%;
+  background-color:orange;
+}
+
+
+
+
+.MDP{
+  position: relative;
+  top:34px;
+  margin-bottom: 65px;
+}
+
+.MDP p{
+  position: relative;
+  bottom:15px;
+}
+
+input{
+
+  background-color: rgb(226, 224, 223);
+
+
+}
+
+.valider{
+
+
+}
+
+.MDPforgot a{
+color:rgb(210, 153, 55);
+font-size: 10px;
+position: relative;
+right: 140px;
+top:30px;
+
+}
+.MDPforgot a:hover{
+  font-style: italic;
+}
+
+
+/*********************************************ACCUEIL***************************************************************/
+
+
+.contenu{
+
+  font-size: 300px;
+  width: 80%;
+  position: relative;
+  left:20%;
+  color: rgb(126, 126, 126);
+  opacity: 0.1;
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
+
+}
 
 
 /*************************************OBJECTIF************************************************************************/
@@ -9,11 +88,12 @@
 
 h1{
 
-  width: 200px;
+  width: 300px;
   position:relative;
-  left:850px;
+  left:50%;
   top: 60px;
   margin-bottom:200px;
+  font-family:'Prestige Elite Std';
 
 }
 
@@ -21,13 +101,12 @@ h1{
 .pageObjectif .titre_Ob{
 
     color:rgb(61, 60, 58);
-    width: 2000px;
+
     /*margin:auto;
     padding-top: 5%;
     padding-bottom:5%;*/
-    font-size:80%;
 
-
+    width: 80%;
 }
 
 .objectifIcons{
@@ -123,5 +202,26 @@ h1{
 
 border-width: 2px;
 border-color: rgb(8, 9, 9);
+
+}
+
+
+/***************************************************************************CREER ARTICLE*******************************************************/
+.creerArticle{
+
+  width: 35%;
+  position: relative;
+  left: 33%;
+  display: block;
+
+
+}
+
+.titreArticle{
+  color:rgb(30, 31, 30);
+  position: relative;
+  left:33%;
+  width: 5%;
+  margin-bottom:25px;
 
 }

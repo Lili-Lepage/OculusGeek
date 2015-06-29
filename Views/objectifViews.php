@@ -8,8 +8,7 @@
 		<title>Occulus_Geek/objectif</title>
     </head>
 	<body>
-
-		<?php include 'Views/headerViews.php'; ?>
+		<?php	include 'header.php'; ?>
 
 <!--***********************************CONTENU*******************************************************-->
 
@@ -60,7 +59,7 @@
 						fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br/>
 						mollit anim id est laborum.</p>
 						<div class="imageObjectif">
-							<img src="images/imgSocial.png"/>
+							<img src="images/imgechange.png"/>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -73,7 +72,7 @@
 						fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br/>
 						mollit anim id est laborum.</p>
 						<div class="imageObjectif">
-							<img src="images/imgActu.png"/>
+							<img src="images/imgactu.png"/>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -85,7 +84,7 @@
 						fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br/>
 						mollit anim id est laborum.</p>
 						<div class="imageObjectif">
-							<img src="images/imgParticipatif.png"/>
+							<img src="images/participatifimg.png"/>
 						</div>
 						<div class="clear"></div>
 

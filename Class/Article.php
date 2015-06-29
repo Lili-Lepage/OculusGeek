@@ -2,30 +2,20 @@
 
 class Article{
 
-    private $id_article;
-    private $userId;
-    public $nom_article='';
-    public $contenu='';
-    public $date_article='';
+    private $nom_article;
+    private $contenu;
+    private $auteur;
+    private $date;
 
 
-
-    public function setArticleInfos($infos=array()){ //je récupère les infos de l'article dans la DB
-        foreach($info as $info=>$infoValue){
-            $this->$info=$infoValue;
-        }
-        var_dump($info);
-    }
-
-    /**/
   public function ecritureArticle(){
+  //        $nom_article='Le titre est ici';
+  //        $contenu='Ecrivez votre article ici';
 
       if (!empty($_POST['submit'])){
           $this->verifArticle();
       }
   }
-
-    /*VERIFICATION DU REMPLISSAGE DES CHAMPS*/
 
   public function verifArticle(){//Fonction qui s'active après qu'il y ait eu Validation
 
@@ -50,14 +40,11 @@ class Article{
   		}
   	}
 
-    /*ENREGISTREMENT DES DONNEES*/
-
   public function recordArticle(){//Va enregistrer les articles dans la DB
     include 'libs/db.php';
-    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article) VALUES (:nom_article,:contenu,:date_article)');
+    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu) VALUES (:nom_article,:contenu)');
     $stmt->bindValue(':nom_article', $_POST['nom_article']);
     $stmt->bindValue(':contenu', $_POST['contenu']);
-    $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
     $stmt->execute();
 
     //!\ ATTENTION ICI LA POP UP DOIT RENVOYER AU MENU ACCUEIL OU A L'AFFICHAGE DES EXPERIENCES /!\
@@ -73,40 +60,17 @@ class Article{
 
   }
 
-
-    /*AFFICHE UNE LISTE DES TITRES DES ARTICLES*/
-
-  public function ListArticle(){
+  public function AfficheArticle(){
     include 'libs/db.php';
-    foreach ($connexion->query('SELECT id_article,nom_article,date_article,contenu FROM articles')as $row){
-
-        $url= 'leursArticle.php?id=';
-        $id= $row ['id_article'];
-        $url= $url.$id;
-
-
-        print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
-        print $row ['date_article']."\t";
-  //      print "<h4>".$row ['contenu']."<br /><br /></h4>";
-
+    $stmt=$connexion->prepare('SELECT FROM info (nom_article,contenu) VALUES (:nom_article,:contenu)');
+    foreach (articles as $article){
+      $stmt->bindValue(':nom_article',$article);
+      echo $article;
+      var_dump($article);
     }
+
   }
 
-    /* PERMET D'AFFICHER UN ARTICLE COMPLET (TITRE, DATE, CONTENU)*/
-
-    public function AfficheArticle($id){
-        include 'libs/db.php';
-        $query=$connexion->query("SELECT nom_article,date_article,contenu FROM articles WHERE id_article=".$id);
-        $data=$query->fetch(PDO::FETCH_OBJ);
-
-
-        print "<h1>".$data->nom_article."</h1>";
-        print "<p>".$data->date_article."</p>";
-        print "<p>".$data->contenu."</p>";
-
-
-
-    }
 }
 
 ?>
