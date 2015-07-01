@@ -36,7 +36,5 @@ if (isset($_POST['submit'])) {
 
 
 
-
-
 include 'Views/inscriptionViews.php';
 ?>

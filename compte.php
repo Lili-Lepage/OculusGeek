@@ -1,6 +1,6 @@
 
 
-<?php session_start();
+<?php/* session_start();
 
 include 'Views/compteViews.php'; ?>
 
@@ -15,6 +15,6 @@ include 'libs/db.php';
 echo $pseudo;
 
 
- 
 
-?>
+
+?>*/

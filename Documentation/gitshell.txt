@@ -1,0 +1,14 @@
+						git shell
+
+	Recupéré ancien commit :
+
+selectionner le commit regarder la liste de chiffre et les lettres à côté et écrire :
+
+- git status 
+- git reset --hard "liste de chiffre"
+
+
+	supprimer le dernier commit 
+
+- git push origin master
+
