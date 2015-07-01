@@ -4,7 +4,7 @@
 
 include 'Class/Article.php';
 
-include "Views/ArticleViews.php";
+include "Views/creerArticleViews.php";
 
 echo date('d/m/Y', time());
 
