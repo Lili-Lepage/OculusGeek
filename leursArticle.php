@@ -1,5 +1,7 @@
 <?php
+session_start();
 
+include 'header.php';
 include 'Class/Article.php';
 //include 'Views/leursExperiencesViews.php';
 
