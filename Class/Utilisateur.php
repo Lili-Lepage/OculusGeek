@@ -6,8 +6,8 @@
 
 class Utilisateur {
 
-    private $userId;
-    public  $pseudo = '';
+    private $userID;
+    private $pseudo = '';
     private $passWord = '';
     private $firstName = '';
     private $lastName = '';
@@ -26,8 +26,21 @@ class Utilisateur {
         }
     }
 
+    /*INSTANCIE L OBJET AVEC LES DONNEES DE COMPTES*/
 
-                            /* VERIFIER SI LE PSEUDO EXISTE OU NON */
+    public function getProfil(){
+
+        include 'libs/db.php';
+        $pseudo=$_SESSION['login'];
+        $query = $connexion->query('SELECT * FROM users WHERE pseudo="'.$pseudo.'"');
+        $data=$query->fetch(PDO::FETCH_OBJ);
+
+        foreach ($data as $key => $value) {
+          $this->$key = $value;
+        }
+    }
+
+      /* VERIFIER SI LE PSEUDO EXISTE OU NON */
 
 
     public function pseudoAlreadyExist() {
@@ -132,59 +145,119 @@ class Utilisateur {
 
 
 
-    /*AFFICHAGE DES DONNEES DE COMPTES*/
-
-    public function getProfile(){
-
-        include 'libs/db.php';
-        $pseudo=$_SESSION['login'];
-        $query = $connexion->query('SELECT lastName,firstName,birthDate,sexe,email,hobits,geekHobits FROM users WHERE pseudo="'.$pseudo.'"');
-        $data=$query->fetch(PDO::FETCH_OBJ);
-
-
-        print "Pseudo: ";
-        print "<h3>" . $pseudo . "</h3>";
-        print "Prénom: ";
-        print "<h4>" . $data->firstName . "</h4>";
-        print "Nom: ";
-        print "<h4>" . $data->lastName . "</h4>";
-        print "date de naissance: ";
-        print $data->birthDate . "<br/><br/>";
-        print "sexe: ";
-        print $data->sexe . "<br/><br/>";
-        print "Email: ";
-        print $data->email . "<br/><br/>";
-        print "Hobits: ";
-        print $data->hobits . "<br/><br/>";
-        print "interets Technologiques: ";
-        print $data->geekHobits . "<br/><br/>";
-
-
-
-
-
-    }
-
     /* AFFICHER LE FORMULAIRE ET ENREGISTRER LES MODIFICATIONS */
-    public function modifProfile(){
+    public function modifProfil($modifpseudo,$firstName,$lastName,$birthDate,$sexe,$email,$hobits,$geektHobits,$userID){
         include 'libs/db.php';
         $pseudo=$_SESSION['login'];
-        $query = $connexion->query('SELECT userID,lastName,firstName,birthDate,sexe,email,hobits,geekHobits FROM users WHERE pseudo="'.$pseudo.'"');
-        $data=$query->fetch(PDO::FETCH_OBJ);
+              $maj=$connexion->query("UPDATE users
+                                      SET
+                                            lastName='$lastName',
+                                            firstName='$firstName',
+                                            birthDate='$birthDate',
+                                            sexe='$sexe',
+                                            email='$email',
+                                            hobits='$hobits',
+                                            geekHobits='$geektHobits'
+                                     WHERE  userID= '$userID' ");
+              $maj->execute();
 
-
-
-      //FORMULAIRE
-        if (isset($_POST['submit'])){
-            if (!$this->pseudoAlreadyExist()|| $pseudo=$this->pseudo) {      //vérifie si le pseudo n'existe PAS || si c'est le même que celui déjà utilisé
-
-                include 'libs/db.php';
-                $maj=$connexion->query("UPDATE users SET  lastName= '".$this->lastName."',firstName='".$this->firstName."',birthDate='".$this->birthDate."',sexe='".$this->sexe."',email='".$this->email."',hobits='".$this->hobits."',geekHobits='". $this->geektHobits."' WHERE userID='".$data->userID."'");
-
-                $maj->execute();
 
             }
-        }
+
+
+    /**********************Getter / setter************************************/
+
+    public function getUserID()
+    {
+      return $this->userID;
     }
+    public function setUserID($userID)
+    {
+      $this->userId=$userID;
+    }
+
+
+    public function getPseudo()
+    {
+      return $this->pseudo;
+    }
+    public function setPseudo($pseudo)
+    {
+      $this->pseudo=$pseudo;
+    }
+
+
+    public function getPassord()
+    {
+      return $this->password;
+    }
+    public function setPassword($password)
+    {
+      $this->password=$password;
+    }
+    public function getFirstName()
+    {
+      return $this->firstName;
+    }
+    public function setFirstName($firstName)
+    {
+      $this->firstName=$firstName;
+    }
+    public function getLastName()
+    {
+      return $this->lastName;
+    }
+    public function setLastName($lastName)
+    {
+      $this->lastName=$lastName;
+    }
+    public function getBirthDate()
+    {
+      return $this->birthDate;
+    }
+    public function setBirthDate($birthDate)
+    {
+      $this->birthDate=$birthDate;
+    }
+    public function getSexe()
+    {
+      return $this->sexe;
+    }
+    public function setSexe($sexe)
+    {
+      $this->sexe=$sexe;
+    }
+    public function getEmail()
+    {
+      return $this->email;
+    }
+    public function setEmail($email)
+    {
+      $this->email=$email;
+    }
+    public function getHobits()
+    {
+      return $this->hobits;
+    }
+    public function setHobits($hobits)
+    {
+      $this->hobits=$hobits;
+    }
+    public function getGeekHobits()
+    {
+      return $this->geekHobits;
+    }
+    public function setgeekHobits($geekHobits)
+    {
+      $this->geekHobits=$geekHobits;
+    }
+
+
 }
+
+
+
+
+
+
 ?>

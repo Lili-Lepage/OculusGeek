@@ -12,24 +12,24 @@
 <body>
 
 
-    <form action='accueil.php' method='post'>
+    <form action='' method='post'>
       <table>
           <tr>
-              <td>Pseudo *</td>
-              <td><input type='text' name='pseudo' value=".$pseudo." /></td>
+              <td>Pseudo (<i>impossible à changer</i>)</td>
+              <td><input type='text' name='pseudo' value="<?php echo $profil->getPseudo(); ?>" /></td>
           </tr>
 
           <tr>
           <td>Prénom *</td>
-          <td><input type='text' name='firstName' value=".$data->firstName." /></td>
+          <td><input type='text' name='firstName' value="<?php echo $profil->getFirstName(); ?>" /></td>
           </tr>
           <tr>
           <td>Nom *</td>
-          <td><input type='text' name='lastName' value= ".$data->lastName." /></td>
+          <td><input type='text' name='lastName' value= "<?php echo $profil->getLastName(); ?>" /></td>
           </tr>
           <tr>
           <td>Date de naissance</td>
-          <td><input type='date' name='birthDate' value=".$data->birthDate." /></td>
+          <td><input type='date' name='birthDate' value="<?php echo $profil->getBirthDate(); ?>" /></td>
           </tr>
           <tr>
           <td>Sexe</td>
@@ -43,17 +43,18 @@
           </tr>
             <tr>
             <td>Email *</td>
-            <td><input type='text' name='email' value=".$data->email." /></td>
+            <td><input type='text' name='email' value="<?php echo $profil->getEmail(); ?>" /></td>
             </tr>
             <tr>
             <td>Loisirs</td>
-            <td><textarea type='text' name='hobits'>".$data->hobits." </textarea></td>
+            <td><input type='textarea' name='hobits' value="<?php echo $profil->getHobits(); ?>"/></td>
             </tr>
             <tr>
             <td>Centres d interets technologiques</td>
-            <td><textarea type='text' name='geekHobits' height='80px' maxlength='100'>".$data->geekHobits."</textarea></td>
+            <td><input type='textarea' name='geekHobits' value="<?php echo $profil->getGeekHobits(); ?>" height='80px'  maxlength='100'/></td>
             </tr>
             <tr>
+              <input type='hidden' name="userID" value="<?php echo $profil->getUserID(); ?>">
             <td><input type='submit' value='Valider' name='submit'></td>
             </tr>
       </table>

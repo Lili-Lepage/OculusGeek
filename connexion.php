@@ -11,9 +11,9 @@ session_start();
 
       if ($user->checkPassWord($_POST['MDP'])) {  //vérification du mot de passe et du pseudo associé
 
-        $_SESSION["login"] = $user->pseudo;
+        $_SESSION["login"] = $user->getPseudo();
 
-        
+
         header('location:accueil.php');// renvoie à la page d'accueil
 
       } else {
