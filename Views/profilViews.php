@@ -2,6 +2,7 @@
 <head>
 
   <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+    <link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
   <meta charset= "UTF-8" />
   <title>Occulus_Geek</title>
 </head>
@@ -11,6 +12,15 @@
 
 <body>
 
+<h1 class="profil"><?php echo $_SESSION['login']; ?></h1>
+
+  <FORM ACTION="profilphp" method="POST" ENCTYPE="multipart/form-data">
+  <input type="hidden" name=\"max_file_size" value="50000">
+  image:<input TYPE="file" NAME="image"><br>
+  <INPUT TYPE="submit" NAME="telecharger" VALUE="envoyer">
+  </form>
+<div class="texteProfil">(Ecrivez dans les champs pour modifier votre profil)</div>
+<div class="formProfil">
 
     <form action='' method='post'>
       <table>
@@ -34,11 +44,7 @@
           <tr>
           <td>Sexe</td>
           <td>
-          <select name='sexe' >
-              <option value='Homme' selected>Homme</option>
-              <option value='Femme'>Femme</option>
-              <option value='Autre'>Autre</option>
-          </select>
+            <input type='texte' name='sexe' value="<?php echo $profil->getSexe(); ?>">
           </td>
           </tr>
             <tr>
@@ -50,13 +56,14 @@
             <td><input type='textarea' name='hobits' value="<?php echo $profil->getHobits(); ?>"/></td>
             </tr>
             <tr>
-            <td>Centres d interets technologiques</td>
+            <td>Centres d'interets technologiques</td>
             <td><input type='textarea' name='geekHobits' value="<?php echo $profil->getGeekHobits(); ?>" height='80px'  maxlength='100'/></td>
             </tr>
             <tr>
               <input type='hidden' name="userID" value="<?php echo $profil->getUserID(); ?>">
-            <td><input type='submit' value='Valider' name='submit'></td>
+            <td><input type='submit' value='modifier' name='submit'></td>
             </tr>
       </table>
     </form>
+</div>
 </body>

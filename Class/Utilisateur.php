@@ -74,8 +74,9 @@ class Utilisateur {
         if (!$this->pseudoAlreadyExist()) {      //si le pseudo n'existe pas
 
             include 'libs/db.php';
-            $inscription=$connexion->prepare('INSERT INTO users (pseudo, passWord, firstName,lastName,birthDate,sexe,email,hobits,geekHobits)
-                                                VALUES (:pseudo,:passWord,:firstName,:lastName,:birthDate,:sexe,:email,:hobits,:geekHobits)');
+            $inscription=$connexion->prepare('INSERT INTO users (pseudo, passWord, firstName,lastName,birthDate,sexe,email,hobits,geekHobits,grade)
+                                                VALUES (:pseudo,:passWord,:firstName,:lastName,:birthDate,:sexe,:email,:hobits,:geekHobits,:grade)');
+                                                $this->grade=1;
         	$inscription->bindValue(':pseudo',     $this->pseudo);
         	$inscription->bindValue(':passWord',   $this->passWord);
         	$inscription->bindValue(':firstName',  $this->firstName);
@@ -85,6 +86,7 @@ class Utilisateur {
         	$inscription->bindValue(':email',      $this->email);
         	$inscription->bindValue(':hobits',     $this->hobits);
         	$inscription->bindValue(':geekHobits', $this->geekHobits);
+          $inscription->bindValue(':grade', $this->grade);
         	$inscription->execute();
             echo 'Inscription réussie';
 
@@ -111,6 +113,18 @@ class Utilisateur {
         return $userByPseudo;
 
     }
+
+
+            /*ON AFFICHE LE PSEUDO ET LE MAIL DU USER*/
+
+    public function listUser(){
+    include 'libs/db.php';
+    foreach ($connexion->query('SELECT userID,pseudo,email FROM users')as $row){
+
+        print $row['pseudo']." ->  ".$row['email']."<br/>";
+      }
+    }
+
 
 
                         /* VERIFICATION DU PASSWORD*/
@@ -165,7 +179,7 @@ class Utilisateur {
             }
 
 
-    /**********************Getter / setter************************************/
+    /**********************GETTER / SETTER************************************/
 
     public function getUserID()
     {
@@ -187,6 +201,7 @@ class Utilisateur {
     }
 
 
+
     public function getPassord()
     {
       return $this->password;
@@ -195,6 +210,9 @@ class Utilisateur {
     {
       $this->password=$password;
     }
+
+
+
     public function getFirstName()
     {
       return $this->firstName;
@@ -203,6 +221,9 @@ class Utilisateur {
     {
       $this->firstName=$firstName;
     }
+
+
+
     public function getLastName()
     {
       return $this->lastName;
@@ -211,6 +232,9 @@ class Utilisateur {
     {
       $this->lastName=$lastName;
     }
+
+
+
     public function getBirthDate()
     {
       return $this->birthDate;
@@ -219,6 +243,9 @@ class Utilisateur {
     {
       $this->birthDate=$birthDate;
     }
+
+
+
     public function getSexe()
     {
       return $this->sexe;
@@ -227,6 +254,9 @@ class Utilisateur {
     {
       $this->sexe=$sexe;
     }
+
+
+
     public function getEmail()
     {
       return $this->email;
@@ -235,6 +265,9 @@ class Utilisateur {
     {
       $this->email=$email;
     }
+
+
+
     public function getHobits()
     {
       return $this->hobits;
@@ -243,6 +276,9 @@ class Utilisateur {
     {
       $this->hobits=$hobits;
     }
+
+
+
     public function getGeekHobits()
     {
       return $this->geekHobits;

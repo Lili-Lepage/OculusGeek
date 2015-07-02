@@ -38,10 +38,7 @@ class Article{
     	$_SESSION['nom_article']=$_POST['nom_article'];//permet de maintenir le nom de l'article en place si il y a des champs manquant
     	$_SESSION['contenu']=$_POST['contenu'];//conserve le contenu si il y a des champs manquant
 
-      /*echo '<p></p>
-  		 <FORM><INPUT Type="button" VALUE="Retourner à l&#8217écriture de votre article" onClick="history.go(-1);return true;"></FORM>';
-  			//!\ ICI LA POP UP DOIT FAIRE UN RETOUR, COMME LA FLECHE RETOUR DU NAVIGATEUR /!\
-      */
+
       $message='Oups, on dirait que tout les champs n&#8217ont pas été remplis, si vous changez de page maintenant, vos données seront perdu';
 
       echo '<script type="text/javascript">window.alert("'.$message.'");</script>';
@@ -60,12 +57,6 @@ class Article{
     $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
     $stmt->execute();
 
-    //!\ ATTENTION ICI LA POP UP DOIT RENVOYER AU MENU ACCUEIL OU A L'AFFICHAGE DES EXPERIENCES /!\
-     /* echo "
-    <form action='../accueil.php' method='post'>
-    <p></p>
-    <div style='text-align:center;'><input type='submit' name='submit' value='Page d&#8217acceuil' tabindex='15' /></div>
-    </form>";*/
 
     $message='Félicitation, votre article a bien été enregistré et soumis à l aprobation d un administrateur.';
 
@@ -80,14 +71,14 @@ class Article{
     include 'libs/db.php';
     foreach ($connexion->query('SELECT id_article,nom_article,date_article,contenu FROM articles')as $row){
 
-        $url= 'leursArticle.php?id=';
+        $url= 'selectedArticle.php?id=';
         $id= $row ['id_article'];
         $url= $url.$id;
 
 
         print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
         print $row ['date_article']."\t";
-  //      print "<h4>".$row ['contenu']."<br /><br /></h4>";
+
 
     }
   }

@@ -222,6 +222,60 @@ border-color: rgb(8, 9, 9);
   position: relative;
   left:33%;
   width: 5%;
+  he
   margin-bottom:25px;
+
+}
+
+
+/**********************************************************************************PROFIL***********************************************************/
+
+h1 .profil{
+
+  position: relative;
+  left: 50%;
+
+}
+
+.formProfil{
+
+width: 33%;
+position: relative;
+left: 33%;
+background-color:#363633;
+padding:5%;
+margin-bottom: 50px;
+
+}
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 20px;
+
+}
+
+td{
+  color:rgb(240, 136, 52);
+}
+
+.texteProfil{
+  width: 20%;
+  color:white;
+  font-size: 10px;
+  font-style: italic;
+  position: absolute;
+  left: 34%;
+  bottom:0%;
+  z-index: 1;
+
+
+}
+
+
+
+input  textarea{
+
+
 
 }
