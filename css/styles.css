@@ -85,21 +85,24 @@ top:30px;
 .meilleurJeux{
 
   background-color:rgb(28, 28, 27);
-  padding:1%;
-
-
-}
-.witcherImg {
-  width: 52%;
+  width: 95%;
   position: relative;
-    left: 25%;
+    left:1%;
+  border-radius: 20px;
+  padding:1%;
+}
+
+.witcherImg {
+  width: 50%;
+  position: relative;
+    left: 10%;
 }
 .witcherTitre{
 
+width: 30%;
 position: absolute;
-  right: 75%;
-
-
+  top:20%;
+  right: 73%;
 
 }
 
@@ -107,16 +110,18 @@ position: absolute;
 .texteMJ{
   width: 50%;
   position: relative;
-    left: 24%;
+    left: 30%;
   margin-top: 1%;
   color:rgb(235, 141, 74);
 }
 
 .titreMJduMois{
-   width: 19%;
+   width: 18%;
    font-size: 30px;
+   float:left;
    position: relative;
-      bottom: 10%;
+      left:4%;
+      top:10%;
   color:rgb(245, 235, 235);
   font-family: 'Consolas';
 
