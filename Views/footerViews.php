@@ -25,7 +25,7 @@
                 <nav class="L_F">
                     <ul>
                       <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_F">Deconnexion</div></a></li>
-                      <li><a href="/OculusGeek/compte.php"><div class="btnD_F">Mon compte : <?php echo $_SESSION['login']; ?></div></a></li>
+                      <li><a href="/OculusGeek/modifProfil.php"><div class="btnD_F">Mon compte : <?php echo $_SESSION['login']; ?></div></a></li>
                    </ul>
 
 

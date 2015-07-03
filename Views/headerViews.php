@@ -39,7 +39,7 @@
       <div class="D_MC">
         <ul>
           <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
-          <li><a href="/OculusGeek/profil.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a>
+          <li><a href="/OculusGeek/modifProfil.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a>
               <ul class="D_MC_Sub">
                 <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_CA">Créer un article</div></a></li>
                 <li><a href="/OculusGeek/espaceAdmin.php"><div class="btnD_CA">Espace admin </div></a></li>

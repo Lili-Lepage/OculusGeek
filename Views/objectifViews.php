@@ -92,6 +92,7 @@
 				</div>
 			</div>
 		</div>
+			<?php	include 'footer.php'; ?>
 		<script type="text/javascript" src="Jquery/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="Jquery/JS_Objectif.js"></script>
 	</body>

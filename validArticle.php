@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'Views/validArticleViews.php';
+include 'header.php';
 
 include 'Class/Article.php';
 

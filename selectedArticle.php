@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-include 'header.php';
+include 'Views/selectedArticleViews.php';
 include 'Class/Article.php';
-//include 'Views/leursExperiencesViews.php';
 
-$id=$_GET["id"];
-$article= new Article($id);
+
+$id=$_GET["id"]; //récupère l'id de l'article
+$article= new Article();
 $article->AfficheArticle($id);
+
+
 
 ?>

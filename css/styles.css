@@ -1,5 +1,9 @@
 /*****************************************************************************************************************/
 @import url(http://fonts.dafont.com/css?family=Prestige Elite Std:300,400,700|Play:400,700);
+@import url(http://fonts.googleapis.com/css?family=Orbitron|Jura);
+/****************************************************************************************************************/
+
+
 
 /*********************************************CONNEXION************************************************************/
 
@@ -77,6 +81,48 @@ top:30px;
   -moz-opacity:0.5;
 
 }
+
+.meilleurJeux{
+
+  background-color:rgb(28, 28, 27);
+  padding:1%;
+
+
+}
+.witcherImg {
+  width: 52%;
+  position: relative;
+    left: 25%;
+}
+.witcherTitre{
+
+position: absolute;
+  right: 75%;
+
+
+
+}
+
+
+.texteMJ{
+  width: 50%;
+  position: relative;
+    left: 24%;
+  margin-top: 1%;
+  color:rgb(235, 141, 74);
+}
+
+.titreMJduMois{
+   width: 19%;
+   font-size: 30px;
+   position: relative;
+      bottom: 10%;
+  color:rgb(245, 235, 235);
+  font-family: 'Consolas';
+
+
+}
+
 
 
 /*************************************OBJECTIF************************************************************************/

@@ -9,7 +9,6 @@
  //on affiche les utilisateurs inscrits.
 
   $listUser = new Utilisateur();
-  $listUser->listUser();
-
+  $listUser->listInscrit();
 
   ?>

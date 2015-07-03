@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) // validation pour modifProfil
 }
 
 
-include 'Views/profilViews.php';
+include 'Views/modifProfilViews.php';
 
 
 ?>

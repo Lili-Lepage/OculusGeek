@@ -16,8 +16,9 @@ class Utilisateur {
     private $email = '';
     private $hobits = '';
     private $geekHobits = '';
+    private $grade='';
 
-  //  public function __construct(){    }
+  /*  public function __construct(){}*/
 
     public function setUserInfos($infos = array()) {  //récupération des infos du user dans la DB
         foreach($infos as $info => $infoValue) {
@@ -26,7 +27,7 @@ class Utilisateur {
         }
     }
 
-    /*INSTANCIE L OBJET AVEC LES DONNEES DE COMPTES*/
+    /*INSTANCIE L OBJET AVEC LES DONNEES DE COMPTES (va chercher dans la base de données les infos)*/
 
     public function getProfil(){
 
@@ -86,7 +87,7 @@ class Utilisateur {
         	$inscription->bindValue(':email',      $this->email);
         	$inscription->bindValue(':hobits',     $this->hobits);
         	$inscription->bindValue(':geekHobits', $this->geekHobits);
-          $inscription->bindValue(':grade', $this->grade);
+          $inscription->bindValue(':grade',       $this->grade);
         	$inscription->execute();
             echo 'Inscription réussie';
 
@@ -112,17 +113,6 @@ class Utilisateur {
 
         return $userByPseudo;
 
-    }
-
-
-            /*ON AFFICHE LE PSEUDO ET LE MAIL DU USER*/
-
-    public function listUser(){
-    include 'libs/db.php';
-    foreach ($connexion->query('SELECT userID,pseudo,email FROM users')as $row){
-
-        print $row['pseudo']." ->  ".$row['email']."<br/>";
-      }
     }
 
 
@@ -159,7 +149,8 @@ class Utilisateur {
 
 
 
-    /* AFFICHER LE FORMULAIRE ET ENREGISTRER LES MODIFICATIONS */
+                    /* AFFICHER LE FORMULAIRE ET ENREGISTRER LES MODIFICATIONS DU PROFIL */
+
     public function modifProfil($modifpseudo,$firstName,$lastName,$birthDate,$sexe,$email,$hobits,$geektHobits,$userID){
         include 'libs/db.php';
         $pseudo=$_SESSION['login'];
@@ -177,6 +168,45 @@ class Utilisateur {
 
 
             }
+
+            /*AFFICHE UNE LISTE DES MEMBRES INSCRITS*/
+
+          public function listInscrit(){
+            include 'libs/db.php';
+            foreach ($connexion->query('SELECT userID, pseudo, email FROM users')as $row){
+
+                $url= 'afficheProfil.php?id=';
+                $id= $row ['userID'];
+                $url= $url.$id;
+
+
+                print "</p><a href=$url>".$row ['pseudo']." "."</a>"."email: ";
+                print $row ['email']."\t";
+
+
+            }
+          }
+
+            /* PERMET D'AFFICHER LE PROFIL D'UN UTILISATEUR SELECTIONNE*/
+
+            public function afficheProfil($id){
+                include 'libs/db.php';
+                $query=$connexion->query("SELECT * FROM users WHERE userID=".$id);
+                $data=$query->fetch(PDO::FETCH_OBJ);
+
+
+                foreach ($data as $key => $value)
+                {
+                  print "<p>".$key.": ".$value."</p>";
+                }
+
+
+
+
+
+            }
+
+
 
 
     /**********************GETTER / SETTER************************************/
