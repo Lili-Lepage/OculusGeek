@@ -14,7 +14,7 @@
 
 <h1 class="profil"><?php echo $_SESSION['login']; ?></h1>
 
-  <FORM ACTION="profilphp" method="POST" ENCTYPE="multipart/form-data">
+  <FORM ACTION="modifProfil.php" method="POST" ENCTYPE="multipart/form-data">
   <input type="hidden" name=\"max_file_size" value="50000">
   image:<input TYPE="file" NAME="image"><br>
   <INPUT TYPE="submit" NAME="telecharger" VALUE="envoyer">

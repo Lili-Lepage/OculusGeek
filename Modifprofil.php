@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) // validation pour modifProfil
 {
 
   $profil->modifProfil($_POST['pseudo'],$_POST['firstName'],$_POST['lastName'],$_POST['birthDate'],$_POST['sexe'],$_POST['email'],$_POST['hobits'],$_POST['geekHobits'],$_POST['userID']);
-  header('location:profil.php');
+  header('location:modifProfil.php');
 }
 
 
