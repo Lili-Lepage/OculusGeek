@@ -27,7 +27,7 @@
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
                 </ul>
             </li>
-            <li class="itemMenu"><a class="menuLink" href="leursExperiences.php"><div class="menuLinkContent">Leurs expériences</div></a></li>
+            <li class="itemMenu"><a class="menuLink" href="listArticle.php"><div class="menuLinkContent">Leurs expériences</div></a></li>
             <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Forum</div></a></li>
         </ul>
     </nav>

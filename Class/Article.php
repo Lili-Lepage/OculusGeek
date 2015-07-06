@@ -115,13 +115,18 @@ class Article{
     }
 
     public function validArticle($id,$TRUE){
-        $maj=$connexion->query("UPDATE article
+        include 'libs/db.php';
+        $maj=$connexion->query("UPDATE articles
                                       SET
-                                            visible='$TRUE',
-                                     WHERE  userID= '$id' ");
+                                            visible=$TRUE
+                                     WHERE  id_article= $id ");
         $maj->execute();
     }
-
+public function supprimerArticle($id){
+    include 'libs/db.php';
+    $suppr=$connexion->query("DELETE FROM articles WHERE id_article= $id");
+    $suppr->execute();
+}
 
     public static function getArticleById($id) {
         include 'libs/db.php';
