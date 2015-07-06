@@ -7,14 +7,14 @@ class Article{
     public $nom_article='';
     public $contenu='';
     public $date_article='';
+    public $visible='';
 
 
+    public function setArticleInfos($infos = array()) {  //récupération des infos de l'article dans la DB
+        foreach($infos as $info => $infoValue) {
+            $this->$info = $infoValue;
 
-    public function setArticleInfos($infos=array()){ //je récupère les infos de l'article dans la DB
-        foreach($info as $info=>$infoValue){
-            $this->$info=$infoValue;
         }
-        var_dump($info);
     }
 
     /**/
@@ -67,20 +67,38 @@ class Article{
 
     /*AFFICHE UNE LISTE DES TITRES DES ARTICLES*/
 
-  public function ListArticle(){
+  public function ListArticle($visibility){
     include 'libs/db.php';
-    foreach ($connexion->query('SELECT id_article,nom_article,date_article,contenu FROM articles')as $row){
-
-        $url= 'selectedArticle.php?id=';
-        $id= $row ['id_article'];
-        $url= $url.$id;
 
 
-        print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
-        print $row ['date_article']."\t";
+    if ($visibility==TRUE){
+        foreach ($connexion->query('SELECT id_article,nom_article,date_article,contenu FROM articles WHERE visible=1')as $row){
+
+            $url= 'selectedArticle.php?id=';
+            $id= $row ['id_article'];
+            $url= $url.$id;
 
 
+            print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
+            print $row ['date_article']."\t";
+
+
+        }
+    }else if ($visibility==FALSE){
+        foreach ($connexion->query('SELECT id_article,nom_article,date_article,contenu FROM articles WHERE visible=0')as $row){
+
+            $url= 'selectedArticle.php?id=';
+            $id= $row ['id_article'];
+            $url= $url.$id;
+
+
+            print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
+            print $row ['date_article']."\t";
+
+
+        }
     }
+
   }
 
     /* PERMET D'AFFICHER UN ARTICLE COMPLET (TITRE, DATE, CONTENU)*/
@@ -94,9 +112,41 @@ class Article{
         print "<h1>".$data->nom_article."</h1>";
         print "<p>".$data->date_article."</p>";
         print "<p>".$data->contenu."</p>";
+    }
+
+    public function validArticle($id,$TRUE){
+        $maj=$connexion->query("UPDATE article
+                                      SET
+                                            visible='$TRUE',
+                                     WHERE  userID= '$id' ");
+        $maj->execute();
+    }
 
 
+    public static function getArticleById($id) {
+        include 'libs/db.php';
+        $query = $connexion->prepare('SELECT * FROM articles WHERE id_article = :id_article ;');
+        $query->bindValue(':id_article', $id);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_OBJ);
+        $userByPseudo = 'Utilisateur inconnu';
 
+        if (is_object($user)) {
+            $userByPseudo = new Article();
+            $userByPseudo->setArticleInfos(get_object_vars($user));
+        }
+
+        return $userByPseudo;
+
+    }
+
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+    public function setVisible($visible)
+    {
+        $this->visible=$visible;
     }
 }
 

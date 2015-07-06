@@ -6,7 +6,8 @@ session_start();
   if (isset($_POST['valider'])) {  //vérifier que le bouton valider soit exécuté
 
     include 'Class/Utilisateur.php';
-    $user=Utilisateur::getUserByPseudo($_POST['login']); //récupération des informations par le pseudo du users
+    $user=Utilisateur::getUserByPseudo($_POST['login']);//récupération des informations par le pseudo du users
+      $_SESSION['login']=$_POST['login'];
     if (is_object($user)) { //si le pseudo existe
 
       if ($user->checkPassWord($_POST['MDP'])) {  //vérification du mot de passe et du pseudo associé

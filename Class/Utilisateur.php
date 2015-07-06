@@ -317,7 +317,14 @@ class Utilisateur {
     {
       $this->geekHobits=$geekHobits;
     }
-
+    public function getGrade()
+    {
+        return $this->grade;
+    }
+    public function setGrade($grade)
+    {
+        $this->grade=$grade;
+    }
 
 }
 
