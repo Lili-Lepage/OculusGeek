@@ -51,10 +51,12 @@ class Article{
 
   public function recordArticle(){//Va enregistrer les articles dans la DB
     include 'libs/db.php';
-    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article) VALUES (:nom_article,:contenu,:date_article)');
+    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,visible) VALUES (:nom_article,:contenu,:date_article,:visible)');
+    $visible=0;
     $stmt->bindValue(':nom_article', $_POST['nom_article']);
     $stmt->bindValue(':contenu', $_POST['contenu']);
     $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
+    $stmt->bindValue(":visible",$visible);
     $stmt->execute();
 
 

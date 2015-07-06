@@ -1,6 +1,6 @@
 <?php
 
-//Regroupe de toutes les fonctons utiles pour toutes les actions touchant les utilisateurs
+//Regroupe de toutes les fonctions utiles pour toutes les actions touchant les utilisateurs
 
 
 

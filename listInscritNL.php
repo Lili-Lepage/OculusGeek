@@ -4,7 +4,7 @@
 
  <?php
 
- include"Class/Utilisateur.php";
+ include_once "Class/Utilisateur.php";
 
  //on affiche les utilisateurs inscrits.
 
