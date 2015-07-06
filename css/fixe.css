@@ -273,21 +273,25 @@ footer {
 /*********************Contact/partenaires**************************************/
 
 .basGauche{
-    width: 10%;
+    width: 20%;
     float: left;
     margin-top:2%;
     line-height:33px;
     margin-left:3%;
+    font-family:'Century Gothic';
+    font-size: 15px;
 }
 
 .basGauche .contact a {
 
   color:rgb(228, 119, 18);
 
+
 }
 
 .basGauche .partenaires a {
   color: white;
+
 }
 
 .basGauche a:hover{
@@ -301,6 +305,7 @@ font-style: italic;
   margin-top:2%;
   line-height:33px;
   margin-right:3%;
+  font-family:'Century Gothic';
 
 
 }
@@ -364,6 +369,7 @@ color:rgb(228, 119, 18);
   position: absolute;
   left: 40%;
   top: 33%;
+  font-family:'Century Gothic';
 }
 
 .InscN .champs .Newsletter{
@@ -377,9 +383,11 @@ color:rgb(228, 119, 18);
 
 .phrase{
   color:rgb(251, 251, 251);
+
 }
 .phrase a{
   color:rgb(228, 119, 18);
+
 }
 
 form{

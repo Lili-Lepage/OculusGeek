@@ -191,7 +191,7 @@ class Utilisateur {
 
             public function afficheProfil($id){
                 include 'libs/db.php';
-                $query=$connexion->query("SELECT * FROM users WHERE userID=".$id);
+                $query=$connexion->query("SELECT pseudo, lastName, firstName, birthDate, sexe, email, hobits, geekHobits FROM users WHERE userID=".$id);
                 $data=$query->fetch(PDO::FETCH_OBJ);
 
 
@@ -199,12 +199,22 @@ class Utilisateur {
                 {
                   print "<p>".$key.": ".$value."</p>";
                 }
-
-
-
-
-
             }
+
+
+          /*AFFICHE LES INSCRIS A LA NEWS LETTER */
+
+            public function listInscritNL(){
+              include 'libs/db.php';
+              foreach ($connexion->query('SELECT email FROM newslettersmails')as $row){
+
+
+                  print $row ['email'];
+
+
+              }
+            }
+
 
 
 

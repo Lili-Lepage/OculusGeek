@@ -8,7 +8,7 @@
   <a href ="listArticle.php"> Liste des articles</a><br/>
   <a href ="validArticle.php">Articles en attente de validation</a><br/>
   <a href ="listInscrit.php">Liste des inscrits</a><br/>
-  <a href ="#">Inscrits à la News Letter</a><br/>
+  <a href ="listInscritNL.php">Inscrits à la News Letter</a><br/>
 
 
 
