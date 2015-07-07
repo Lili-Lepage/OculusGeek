@@ -1,6 +1,5 @@
 
 <?php
-
 session_start();
 
   if (isset($_POST['valider'])) {  //vérifier que le bouton valider soit exécuté
@@ -12,16 +11,23 @@ session_start();
 
       if ($user->checkPassWord($_POST['MDP'])) {  //vérification du mot de passe et du pseudo associé
 
-        $_SESSION["login"] = $user->getPseudo();
+      $_SESSION["login"] = $user->getPseudo();
 
-
-        header('location:accueil.php');// renvoie à la page d'accueil
+        /*header('location:accueil.php');// renvoie à la page d'accueil*/
 
       } else {
         echo "mauvais pseudo ou mot de passe";
       }
     }
+
+    if (!is_object($user))  //si le pseudo existe pas
+      {
+      echo "vous n'existez pas";
+    }
   }
+
+
+
   include 'Views/connexionViews.php';
 
 

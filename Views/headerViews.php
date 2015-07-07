@@ -6,7 +6,7 @@
 
 
     <div class="baniere">
-      <img class="image" src="<?=(isset($bannPicture)) ? $bannPicture : 'images/baniere/oculusGeek2.png'?>" />
+      <img class="image" src='images/baniere/oculusGeek2.png'?>" />
     </div>
 
     </div>
@@ -34,12 +34,15 @@
 
 
 
-    <?php if ($con) {  // si l'utilisateur est connecté afficher mon compte et deconnexion ?>
+    <?php
+    echo "toto";
+
+    if(!empty($_SESSION['login'])) {  // si l'utilisateur est connecté afficher mon compte et deconnexion ?>
     <nav>
       <div class="D_MC">
         <ul>
           <li><a href="/OculusGeek/deconnexion.php"><div class="btnD_C">Deconnexion</div></a></li>
-          <li><a href="/OculusGeek/modifProfil.php"><div class="btnD_C">Mon compte : <?php echo $_SESSION['login']; ?></div></a>
+          <li><a href="/OculusGeek/modifProfil.php"><div class="btnD_C">Mon compte :</div></a>
               <ul class="D_MC_Sub">
                 <li><a href="/OculusGeek/creerArticle.php"><div class="btnD_CA">Créer un article</div></a></li>
                   <?php if ($grade>1)

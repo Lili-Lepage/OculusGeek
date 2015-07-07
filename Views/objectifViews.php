@@ -18,7 +18,7 @@
 		<div class="pageObjectif"> <!--page entière-->
 
 
-							<div class="titre_Ob"> <img src="images/titrePage/objectif.jpg"/>        <!--<h1>Notre Objectif</h1>--> </div>
+							<div class="titre_Ob"><h1>.Notre Objectif.</h1></div>
 
 
 				<div class="objectifIcons"> <!--Div contenant mes 3 icônes-->

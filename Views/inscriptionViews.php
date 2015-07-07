@@ -58,12 +58,12 @@
                     <td><input type="text" name="email" placeholder="xxxx@xxxx.com" /></td>
                 </tr>
                 <tr>
-                    <td>Loisirs</td>
-                    <td><textarea type="text" name="hobits">qu aimez vous ?</textarea></td>
+                    <td>Loisirs/centre d'intêrets</td>
+                    <td><textarea type="text" name="hobits"></textarea></td>
                 </tr>
                 <tr>
-                    <td>Centres d"interets technologiques</td>
-                    <td><textarea type="text" name="geekHobits" height="80px" maxlength="100">Quels sujets t&#8217interessent ?</textarea></td>
+                    <td>A propos de moi</td>
+                    <td><textarea type="text" name="geekHobits" height="80px" maxlength="100"></textarea></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Valider" name="submit"></td>

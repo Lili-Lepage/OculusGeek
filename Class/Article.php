@@ -147,6 +147,14 @@ public function supprimerArticle($id){
 
     }
 
+
+
+
+
+
+
+    /*************************************************GETTER/SETTER****************************************************/
+
     public function getVisible()
     {
         return $this->visible;

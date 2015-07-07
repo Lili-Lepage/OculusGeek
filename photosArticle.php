@@ -28,9 +28,32 @@ if( isset($_POST['upload']) ) // si formulaire soumis
         exit("Impossible de copier le fichier dans $content_dir");
     }
 
-    echo "Le fichier a bien été uploadé";
-  
-}
+//on inclu la requête qui permet de rentrer les images dans la BDD une fois qu'elles sont présentes dans le dossier.
+
+    include "Class/Photos.php";
+    $uploadImg= new Photos();
+    $uploadImg->uploadIMG();
+
+        echo "Le fichier a bien été uploadé";
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>

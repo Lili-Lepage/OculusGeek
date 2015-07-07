@@ -12,13 +12,12 @@
 
 <body>
 
-<h1 class="profil"><?php echo $_SESSION['login']; ?></h1>
 
-  <FORM ACTION="modifProfil.php" method="POST" ENCTYPE="multipart/form-data">
-  <input type="hidden" name=\"max_file_size" value="50000">
-  image:<input TYPE="file" NAME="image"><br>
-  <INPUT TYPE="submit" NAME="telecharger" VALUE="envoyer">
-  </form>
+<?php include "photosArticle.php"; //on inclu le formulaire pour upload une image ?>
+
+<h1 class="profil"><?php echo $_SESSION['login']; //afffichage du nom du user ?></h1>
+
+
 <div class="texteProfil">(Ecrivez dans les champs pour modifier votre profil)</div>
 <div class="formProfil">
 
@@ -52,12 +51,12 @@
             <td><input type='text' name='email' value="<?php echo $profil->getEmail(); ?>" /></td>
             </tr>
             <tr>
-            <td>Loisirs</td>
-            <td><input type='textarea' name='hobits' value="<?php echo $profil->getHobits(); ?>"/></td>
+            <td>Loisirs/centre d'intérêts</td>
+            <td><input type='textarea' name='hobits' class="Hobits" value="<?php echo $profil->getHobits(); ?>"/></td>
             </tr>
             <tr>
-            <td>Centres d'interets technologiques</td>
-            <td><input type='textarea' name='geekHobits' value="<?php echo $profil->getGeekHobits(); ?>" height='80px'  maxlength='100'/></td>
+            <td>A propos de moi</td>
+            <td><input type='textarea' name='geekHobits' class="geekHobits" value="<?php echo $profil->getGeekHobits(); ?>" height='80px'  maxlength='100'/></td>
             </tr>
             <tr>
               <input type='hidden' name="userID" value="<?php echo $profil->getUserID(); ?>">

@@ -139,10 +139,9 @@ position: absolute;
 
 h1{
 
-  width: 300px;
+  width: 316px;
   position:relative;
   left:50%;
-  top: 60px;
   margin-bottom:200px;
   font-family:'Prestige Elite Std';
 
@@ -279,6 +278,14 @@ border-color: rgb(8, 9, 9);
   margin-bottom:25px;
 
 }
+
+.Hobits {
+  height: 150px;
+  width: 250px; }
+
+.geekHobits{
+    height: 150px;
+    width: 250px; }
 
 
 /**********************************************************************************PROFIL***********************************************************/

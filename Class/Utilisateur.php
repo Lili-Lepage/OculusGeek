@@ -77,7 +77,7 @@ class Utilisateur {
             include 'libs/db.php';
             $inscription=$connexion->prepare('INSERT INTO users (pseudo, passWord, firstName,lastName,birthDate,sexe,email,hobits,geekHobits,grade)
                                                 VALUES (:pseudo,:passWord,:firstName,:lastName,:birthDate,:sexe,:email,:hobits,:geekHobits,:grade)');
-                                                $this->grade=1;
+                                                 $this->grade=1;
         	$inscription->bindValue(':pseudo',     $this->pseudo);
         	$inscription->bindValue(':passWord',   $this->passWord);
         	$inscription->bindValue(':firstName',  $this->firstName);
@@ -209,7 +209,7 @@ class Utilisateur {
               foreach ($connexion->query('SELECT email FROM newslettersmails')as $row){
 
 
-                  print $row ['email'];
+                  print $row ['email']."<br/>";
 
 
               }
