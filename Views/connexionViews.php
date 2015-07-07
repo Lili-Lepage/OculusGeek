@@ -17,7 +17,7 @@
 
               <div class="login"><input type="text" name="login" placeholder="login" /><br /></div>
               <div class="MDP"><input type="password" name="MDP" placeholder="mot de passe" /><br /></div>
-
+<?php echo $error; ?>
 
     <input class="valider" type="submit" value="Login" name="valider"/>
 
@@ -28,7 +28,7 @@
 
       </form>
 
-      
+
   </div>
 
   </body>

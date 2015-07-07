@@ -2,6 +2,8 @@
 <?php
 session_start();
 
+$error="";
+
   if (isset($_POST['valider'])) {  //vérifier que le bouton valider soit exécuté
 
     include 'Class/Utilisateur.php';
@@ -16,13 +18,13 @@ session_start();
         /*header('location:accueil.php');// renvoie à la page d'accueil*/
 
       } else {
-        echo "mauvais pseudo ou mot de passe";
+        $error="mauvais pseudo ou mot de passe";
       }
     }
 
     if (!is_object($user))  //si le pseudo existe pas
       {
-      echo "vous n'existez pas";
+      $error="vous n'êtes pas inscrit";
     }
   }
 

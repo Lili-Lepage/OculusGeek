@@ -12,7 +12,7 @@ if (isset($_SESSION['login'])) {
   $profil= new Utilisateur;
   $profil->getProfil();
   $grade=$profil->getGrade(); //pour avoir lke grade de présent
- $pseudo=$profil->getPseudo(); //pour récupérer le pseudo et l'afficher dans le header
+  $pseudo=$profil->getPseudo(); //pour récupérer le pseudo et l'afficher dans le header
 
 }
 

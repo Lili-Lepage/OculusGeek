@@ -2,8 +2,6 @@
 
 //Regroupe de toutes les fonctions utiles pour toutes les actions touchant les utilisateurs
 
-
-
 class Utilisateur {
 
     private $userID;
@@ -16,7 +14,7 @@ class Utilisateur {
     private $email = '';
     private $hobits = '';
     private $geekHobits = '';
-    private $grade='';
+    private $grade=1;
 
   /*  public function __construct(){}*/
 
@@ -35,9 +33,10 @@ class Utilisateur {
         $pseudo=$_SESSION['login'];
         $query = $connexion->query('SELECT * FROM users WHERE pseudo="'.$pseudo.'"');
         $data=$query->fetch(PDO::FETCH_OBJ);
-
-        foreach ($data as $key => $value) {
-          $this->$key = $value;
+        if (is_object($data)) {
+            foreach ($data as $key => $value) {
+                $this->$key = $value;
+            }
         }
     }
 
@@ -54,7 +53,6 @@ class Utilisateur {
            	$query->bindValue(':pseudo', $this->pseudo); //toujours mettre bindValue = protection des données.
             $query->execute();
             $user = $query->fetch(PDO::FETCH_OBJ);
-
 
             //Si le pseudo trouvé en base et celui de l'objet ne sont pas les mêmes ou que l'objet n'existe pas, on met la variable à false.
             if (!is_object($user) || $user->pseudo != $this->pseudo) {
@@ -77,18 +75,17 @@ class Utilisateur {
             include 'libs/db.php';
             $inscription=$connexion->prepare('INSERT INTO users (pseudo, passWord, firstName,lastName,birthDate,sexe,email,hobits,geekHobits,grade)
                                                 VALUES (:pseudo,:passWord,:firstName,:lastName,:birthDate,:sexe,:email,:hobits,:geekHobits,:grade)');
-                                                 $this->grade=1;
-        	$inscription->bindValue(':pseudo',     $this->pseudo);
-        	$inscription->bindValue(':passWord',   $this->passWord);
-        	$inscription->bindValue(':firstName',  $this->firstName);
-        	$inscription->bindValue(':lastName',   $this->lastName);
-        	$inscription->bindValue(':birthDate',  $this->birthDate);
-        	$inscription->bindValue(':sexe',       $this->sexe);
-        	$inscription->bindValue(':email',      $this->email);
-        	$inscription->bindValue(':hobits',     $this->hobits);
-        	$inscription->bindValue(':geekHobits', $this->geekHobits);
-          $inscription->bindValue(':grade',       $this->grade);
-        	$inscription->execute();
+          	$inscription->bindValue(':pseudo',     $this->pseudo);
+          	$inscription->bindValue(':passWord',   $this->passWord);
+          	$inscription->bindValue(':firstName',  $this->firstName);
+          	$inscription->bindValue(':lastName',   $this->lastName);
+          	$inscription->bindValue(':birthDate',  $this->birthDate);
+          	$inscription->bindValue(':sexe',       $this->sexe);
+          	$inscription->bindValue(':email',      $this->email);
+          	$inscription->bindValue(':hobits',     $this->hobits);
+          	$inscription->bindValue(':geekHobits', $this->geekHobits);
+            $inscription->bindValue(':grade',       $this->grade);
+          	$inscription->execute();
             echo 'Inscription réussie';
 
         }
