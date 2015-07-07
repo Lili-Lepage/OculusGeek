@@ -30,7 +30,7 @@ class Article{
   public function verifArticle(){//Fonction qui s'active après qu'il y ait eu Validation
 
   //mettre les $_POST en variable.
-    if (isset($_POST['nom_article'])&& !empty($_POST['nom_article'])/*&& isset($_POST['theme1'])&& !empty($_POST['theme1'])*/&& isset($_POST['contenu'])&& !empty($_POST['contenu'])/*&& isset($_POST['theme2'])&& !empty($_POST['theme2'])*/){
+    if (isset($_POST['nom_article'])&& !empty($_POST['nom_article'])&& isset($_POST['theme1'])&& ($_POST['theme1']!="choix") && isset($_POST['contenu'])&& !empty($_POST['contenu'])){
             $this->recordArticle();
 
     } else {
@@ -51,13 +51,13 @@ class Article{
 
   public function recordArticle(){//Va enregistrer les articles dans la DB
     include 'libs/db.php';
-    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,visible) VALUES (:nom_article,:contenu,:date_article,:visible)');
-    $visible=0;
+    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,theme) VALUES (:nom_article,:contenu,:date_article,:theme)');
     $stmt->bindValue(':nom_article', $_POST['nom_article']);
     $stmt->bindValue(':contenu', $_POST['contenu']);
     $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
-    $stmt->bindValue(":visible",$visible);
+    $stmt->bindValue(':theme', $_POST['theme1']);
     $stmt->execute();
+
 
 
     $message='Félicitation, votre article a bien été enregistré et soumis à l aprobation d un administrateur.';

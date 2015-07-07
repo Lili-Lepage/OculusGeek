@@ -17,13 +17,17 @@
       <?php include 'header.php'?>
       <?php include "photosArticle.php"; //on inclu le formulaire pour upload une image ?>
 
-      <div class="creerArticle">
-        <form action='' method='post'>
-            <p class="titreArticle">
-              Titre</br>
-                <input id="articleTitle" type='text' name='nom_article' placeholder='titre de l&#8217article' />
-                <!-- <input type='text' name='titre_article' placeholder=$titre/> mettre combobox-->
-            </p>
+  <div class="creerArticle">
+    <form action='' method='post'>
+        <p class="titreArticle">
+          Titre</br>
+            <input id="articleTitle" type='text' name='nom_article' placeholder='titre de l&#8217article' />
+             <select name="theme1">
+                 <option value="choix">Choix de thème</option>
+                 <option value="tech">A la pointe de la technologie</option>
+                 <option value="game">Espace gaming</option>
+             </select>
+        </p>
 
             <p>Attention, tous les champs doivent être remplis: titre, contenu de l'article,thème principale et thème(s) secondaire(s).</p>
 
