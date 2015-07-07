@@ -20,20 +20,22 @@ if (isset($_POST['submit'])) {
             'geekHobits' => $_POST['geekHobits']
         );
         $newUser->setUserInfos($userInfos);
-        $newUser->insertNewUserInDb();
+        $newsletter = false;
+        if ($_POST['newsLetters']) {
+            $newsletter = true;
+        }
+        $newUser->insertNewUserInDb(true);
 
 
 
-        header('location:/OculusGeek/accueil.php'); //on renvoi à la page d'acceuil lorsque l'inscription a réussie
+        //header('location:/OculusGeek/accueil.php'); //on renvoi à la page d'acceuil lorsque l'inscription a réussie
 
     }
 
     else {
-    echo'<script type="text/javascript">window.alert("'.$messageIns.'");</script>';
+        echo'<script type="text/javascript">window.alert("'.$messageIns.'");</script>';
     }
   }
-
-
 
 
 include 'Views/inscriptionViews.php';

@@ -1,6 +1,5 @@
 <?php
 include "libs/db.php";
-include "Views/photosArticleViews.php";
 if( isset($_POST['upload']) ) // si formulaire soumis
 {
     $content_dir = 'photosArticle/'; // dossier où sera déplacé le fichier
@@ -32,11 +31,16 @@ if( isset($_POST['upload']) ) // si formulaire soumis
 
     include "Class/Photos.php";
     $uploadImg= new Photos();
+    $photoInfos = array('imageNom' => $name_file, 'imageURL' => $content_dir.$name_file);
+    $uploadImg->setPhotosInfos($photoInfos);
     $uploadImg->uploadIMG();
+    $photoPath = $content_dir.$name_file;
 
         echo "Le fichier a bien été uploadé";
 
   }
+
+  include "Views/photosArticleViews.php";
 
 
 

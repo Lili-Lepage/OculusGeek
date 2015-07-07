@@ -15,6 +15,7 @@ class Utilisateur {
     private $hobits = '';
     private $geekHobits = '';
     private $grade=1;
+    private $emailId='';
 
   /*  public function __construct(){}*/
 
@@ -68,7 +69,7 @@ class Utilisateur {
 
                                 /*INSERER NOUVEL UTILISATEUR DANS LA DB*/
 
-    public function insertNewUserInDb() {
+    public function insertNewUserInDb($newsletter) {
 
         if (!$this->pseudoAlreadyExist()) {      //si le pseudo n'existe pas
 
@@ -86,6 +87,23 @@ class Utilisateur {
           	$inscription->bindValue(':geekHobits', $this->geekHobits);
             $inscription->bindValue(':grade',       $this->grade);
           	$inscription->execute();
+
+            if ($newsletter) {
+                $id = $connexion->lastInsertId();
+                echo $id;
+                $insertNewsLetter=$connexion->prepare('INSERT INTO newslettersmails (email, userID) VALUES (:email, :userID)');
+              	$insertNewsLetter->bindValue(':email', $this->email);
+                $insertNewsLetter->bindValue(':userID', $id);
+              	$insertNewsLetter->execute();
+
+                $idNewsLetter = $connexion->lastInsertId();//va chercher le dernier auto_increment généré pour cette table
+
+                $updateUser =$connexion->prepare('UPDATE users SET emailId = :emailId WHERE userID = :userID');
+                $updateUser->bindValue(':emailId', $idNewsLetter);
+                $updateUser->bindValue(':userID', $id);
+              	$updateUser->execute();
+
+            }
             echo 'Inscription réussie';
 
         }

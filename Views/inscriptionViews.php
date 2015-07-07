@@ -58,6 +58,10 @@
                     <td><input type="text" name="email" placeholder="xxxx@xxxx.com" /></td>
                 </tr>
                 <tr>
+                    <td>inscription à la news letter *</td>
+                    <td><input type="checkbox" name="newsLetters" /></td>
+                </tr>
+                <tr>
                     <td>Loisirs/centre d'intêrets</td>
                     <td><textarea type="text" name="hobits"></textarea></td>
                 </tr>
