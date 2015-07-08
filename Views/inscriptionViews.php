@@ -1,18 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 	<head>
-		<meta charset="utf-8" />
+	<meta charset= "UTF-8" />
 
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
 		<title>Occulus_Geek</title>
    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script><!-- Fait fonctionner la date de naissance-->
 
 		<script>
 			webshims.setOptions('forms-ext', {types: 'date'});
 			webshims.polyfill('forms forms-ext');
-		</script>
+		</script><!-- Fait fonctionner la date de naissance-->
 
   </head>
 	<body>
@@ -56,11 +57,11 @@
                 </tr>
                 <tr>
                     <td>Email *</td>
-                    <td><input type="text" name="email" placeholder="xxxx@xxxx.com" /></td>
+                    <td><input type="text" name="emailIN" placeholder="xxxx@xxxx.com" /></td>
                 </tr>
                 <tr>
                     <td>Inscription à la news letter </td>
-                    <td><input type="checkbox" name="newsLetters" /></td>
+                    <td><input type="checkbox" value="inscrire" name="newsLetters" /></td>
                 </tr>
                 <tr>
                     <td>Loisirs/centre d'intêrets</td>

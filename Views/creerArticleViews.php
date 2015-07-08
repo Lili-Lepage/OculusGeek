@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
-<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
-
 <html lang="fr">
+
   <head>
       <meta charset= "UTF-8" />
+      <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
       <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
       <title>Occulus_Geek</title>
       <script type="text/javascript" src="Jquery/jquery-2.1.4.min.js"></script>

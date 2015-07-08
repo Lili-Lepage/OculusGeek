@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
-<meta charset="utf-8"/>
-<body>
-<form method="POST" action="" enctype="multipart/form-data">
+<head>
+  <meta charset="utf-8"/>
+</head>
+  <body>
+  <form method="POST" action="" enctype="multipart/form-data">
      <!-- On limite le fichier à 100Ko -->
      Fichier : <input type="file" name="image">
      <input type="submit" name="upload" value="upload">

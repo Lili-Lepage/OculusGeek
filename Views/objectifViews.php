@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
 		<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
 
 		<title>Occulus_Geek/objectif</title>
-    </head>
+  </head>
 
 <!--***********************************CONTENU*******************************************************-->
 

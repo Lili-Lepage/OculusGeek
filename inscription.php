@@ -18,16 +18,17 @@ session_start();
               'lastName'   => $_POST['lastName'],
               'birthDate'  => $_POST['birthDate'],
               'sexe'       => $_POST['sexe'],
-              'email'      => $_POST['email'],
+              'email'      => $_POST['emailIN'],
               'hobits'     => $_POST['hobits'],
               'geekHobits' => $_POST['geekHobits']
           );
           $newUser->setUserInfos($userInfos);
           $newsletter = false;
-          if ($_POST['newsLetters']) {  //vérification de l'inscription à la newsletter
+          if (isset($_POST['newsLetters']) && $_POST['newsLetters'] == 'inscrire') {  //vérification de l'inscription à la newsletter
               $newsletter = true;
+
           }
-          $newUser->insertNewUserInDb(true);
+          $newUser->insertNewUserInDb($newslette);
 
 
 

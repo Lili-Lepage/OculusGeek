@@ -1,8 +1,8 @@
-<!Doctype.html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-
   <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
-    <link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
+  <link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
   <meta charset= "UTF-8" />
   <title>Occulus_Geek</title>
 </head>

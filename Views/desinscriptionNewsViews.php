@@ -1,6 +1,8 @@
 
- <!--lire le css du header inclus dans le controller-->
+<!DOCTYPE html>
+<html lang="fr">
  <header>
+   <meta charset= "UTF-8" />
     <link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
     <link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
  </header>
