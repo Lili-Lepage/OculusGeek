@@ -14,14 +14,14 @@
         <ul class="menu">
             <li class="itemMenu"><a class="menuLink" href="/OculusGeek/accueil.php"><div class="menuLinkContent">Accueil</div></a></li>
             <li class="itemMenu"><a class="menuLink" href="/OculusGeek/objectif.php"><div class="menuLinkContent">Notre objectif</div></a>
-            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">A la pointe de la technologie</div></a>
+            <li class="itemMenu"><a class="menuLink" href="technologie.php"><div class="menuLinkContent">A la pointe de la technologie</div></a>
                 <ul class="subMenu">
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">ordinateur</div></a></li>
                     <li class="itemSubMenu"><a class="subMenuLink" class="menuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">objets connectés</div></a></li>
                 </ul>
             </li>
-            <li class="itemMenu"><a class="menuLink" href="#"><div class="menuLinkContent">Espace gaming</div></a>
+            <li class="itemMenu"><a class="menuLink" href="espaceGaming.php"><div class="menuLinkContent">Espace gaming</div></a>
                 <ul class="subMenu">
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">ordinateur</div></a></li>
                     <li class="itemSubMenu"><a class="subMenuLink" href="#"><div class="subMenuLinkContent">console</div></a></li>

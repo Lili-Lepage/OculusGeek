@@ -180,9 +180,24 @@ class Utilisateur {
                                             geekHobits='$geektHobits'
                                      WHERE  userID= '$userID' ");
               $maj->execute();
-
-
             }
+    public function changeGrade($id,$grade){
+        include 'libs/db.php';
+        $maj=$connexion->query("UPDATE users SET grade='$grade' WHERE userID='$id'");
+        $maj->execute();
+    }
+
+    public function supprimerCompte($id){
+        include 'libs/db.php';
+        $changeID=$connexion->query("UPDATE users SET emailid=NULL WHERE userID=$id");
+        $changeID->execute();
+        $mail=$connexion->query("DELETE FROM newslettersmails WHERE userID= $id");
+
+        $mail->execute();
+        $suppr=$connexion->query("DELETE FROM users WHERE userID= $id");
+        $suppr->execute();
+
+    }
 
             /*AFFICHE UNE LISTE DES MEMBRES INSCRITS*/
 

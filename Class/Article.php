@@ -7,7 +7,8 @@ class Article{
     public $nom_article='';
     public $contenu='';
     public $date_article='';
-    public $visible='';
+    private $visible=0;
+    private $theme="";
 
 
     public function setArticleInfos($infos = array()) {  //récupération des infos de l'article dans la DB
@@ -51,11 +52,12 @@ class Article{
 
   public function recordArticle(){//Va enregistrer les articles dans la DB
     include 'libs/db.php';
-    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,theme) VALUES (:nom_article,:contenu,:date_article,:theme)');
+    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,visible,theme) VALUES (:nom_article,:contenu,:date_article,:visible,:theme)');
     $stmt->bindValue(':nom_article', $_POST['nom_article']);
     $stmt->bindValue(':contenu', $_POST['contenu']);
     $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
     $stmt->bindValue(':theme', $_POST['theme1']);
+    $stmt->bindValue(':visible',$this->visible);
     $stmt->execute();
 
 
@@ -100,8 +102,34 @@ class Article{
 
         }
     }
-
   }
+    public function articleTech(){
+      include 'libs/db.php';
+      foreach ($connexion->query ('SELECT id_article,nom_article,date_article,contenu FROM articles WHERE visible=1 && theme="tech"')as $row){
+
+          $url= 'selectedArticle.php?id=';
+          $id= $row ['id_article'];
+          $url= $url.$id;
+
+
+          print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
+          print $row ['date_article']."\t";
+      }
+    }
+    public function articleGame(){
+        include 'libs/db.php';
+        foreach ($connexion->query ('SELECT id_article,nom_article,date_article,contenu FROM articles WHERE visible=1 && theme="game"')as $row){
+
+            $url= 'selectedArticle.php?id=';
+            $id= $row ['id_article'];
+            $url= $url.$id;
+
+
+            print "</p><a href=$url>".$row ['nom_article']."</a>"."  -  fait le: ";
+            print $row ['date_article']."\t";
+        }
+    }
+
 
     /* PERMET D'AFFICHER UN ARTICLE COMPLET (TITRE, DATE, CONTENU)*/
 

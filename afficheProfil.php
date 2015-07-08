@@ -9,8 +9,11 @@ $userProfil= new Utilisateur();
 $userProfil->afficheProfil($ID);
 $userProfil->getProfil();
 $grade=$userProfil->getGrade();
-if ($grade>2){
-    echo "Changer le rang de la personne."; //ici on doit rajouter la possibilité de changer le rang (?)
-    echo"Supprimer le compte de la personne."; //ici on doit ajouter la possibilité de supprimer le compte (?)
+if (isset($_POST['validerGrade'])){
+    $userProfil->changeGrade($ID,$_POST['grade']);
+
+}
+if (isset($_POST['suppr']) && $_POST['suppr']){
+    $userProfil->supprimerCompte($ID);
 }
 ?>

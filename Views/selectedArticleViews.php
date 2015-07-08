@@ -7,7 +7,6 @@
           <br />
            <?php if (isset ($suppr) && $suppr==TRUE){
 
-<?php if (isset ($suppr) && $suppr==TRUE){
 
 echo '<input type="submit" name="validArticle" value="valider l article">
 <input type="submit" name="supprimerArticle" value="Supprimer">';
