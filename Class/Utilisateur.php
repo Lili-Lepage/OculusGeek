@@ -86,7 +86,7 @@ class Utilisateur {
           	$inscription->bindValue(':email',      $this->email);
           	$inscription->bindValue(':hobits',     $this->hobits);
           	$inscription->bindValue(':geekHobits', $this->geekHobits);
-            $inscription->bindValue(':grade',       $this->grade);
+            $inscription->bindValue(':grade',      $this->grade);
           	$inscription->execute();
 
             if ($newsletter) { //si la presonne s'inscrit à la newsletter lors de l'inscription

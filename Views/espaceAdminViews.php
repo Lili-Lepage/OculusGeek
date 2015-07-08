@@ -5,7 +5,7 @@
 
 <body>
 <?php include "header.php"; ?>
-<div class="footerEA"><?php include "footer.php"; ?></div>
+
 
 
   <a href ="listArticle.php"> Liste des articles</a><br/>
