@@ -13,7 +13,7 @@
 			webshims.polyfill('forms forms-ext');
 		</script>
 
-    </head>
+  </head>
 	<body>
         <?php include 'header.php'; ?>
 
@@ -75,7 +75,7 @@
             </table>
         </form>
 
-					<?php	include 'footer.php'; ?>
+			<?php	include 'footer.php'; ?>
 
     </body>
 </html>

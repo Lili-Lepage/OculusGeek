@@ -10,26 +10,4 @@
   <a href ="listInscrit.php">Liste des inscrits</a><br/>
   <a href ="listInscritNL.php">Inscrits à la News Letter</a><br/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>

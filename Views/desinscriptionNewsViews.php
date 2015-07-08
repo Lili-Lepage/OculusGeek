@@ -13,7 +13,7 @@
      <input type="*" name='email' placeholder="email"  size="30" maxlength="100" />
      <input type="submit" name="submit" value="je me desinscris" />
    </form>
-</div>
+ </div>
 
 
 

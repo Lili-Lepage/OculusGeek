@@ -1,5 +1,7 @@
 <?php
 
+//AFFICHAGE DE L ARTICLE SELECTIONNE
+
 session_start();
 
 include 'header.php';

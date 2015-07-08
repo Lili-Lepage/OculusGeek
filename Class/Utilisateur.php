@@ -88,15 +88,16 @@ class Utilisateur {
             $inscription->bindValue(':grade',       $this->grade);
           	$inscription->execute();
 
-            if ($newsletter) {
-                $id = $connexion->lastInsertId();
+            if ($newsletter) { //si la presonne s'inscrit à la newsletter lors de l'inscription
+
+                $id = $connexion->lastInsertId(); //on attribut le emailID de user dans newsletter mail
                 echo $id;
                 $insertNewsLetter=$connexion->prepare('INSERT INTO newslettersmails (email, userID) VALUES (:email, :userID)');
               	$insertNewsLetter->bindValue(':email', $this->email);
                 $insertNewsLetter->bindValue(':userID', $id);
               	$insertNewsLetter->execute();
 
-                $idNewsLetter = $connexion->lastInsertId();//va chercher le dernier auto_increment généré pour cette table
+                $idNewsLetter = $connexion->lastInsertId();//On va chercher le dernier auto_increment généré pour cette table et l'attribuer au user
 
                 $updateUser =$connexion->prepare('UPDATE users SET emailId = :emailId WHERE userID = :userID');
                 $updateUser->bindValue(':emailId', $idNewsLetter);

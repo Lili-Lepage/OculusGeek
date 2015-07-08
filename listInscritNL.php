@@ -1,12 +1,10 @@
 <?php session_start();
- include "header.php"; ?>
+ include "header.php";
 
+//AFFICHAGE DES UTILISATEURS INSCRITS A LA NEWS LETTER
 
- <?php
 
  include_once "Class/Utilisateur.php";
-
- //on affiche les utilisateurs inscrits.
 
   $listUser = new Utilisateur();
   $listUser->listInscritNL();

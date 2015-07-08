@@ -27,6 +27,13 @@ if (isset($_SESSION['login'])) {
 
 	if (isset($_POST['email']) && isset($_POST['submit'])) {
 
+      if {
+
+
+
+      }
+
+
 		include 'libs/db.php'; //connexion à la DB
 		$inscriptionNews=$connexion->prepare('INSERT INTO newslettersmails (email) VALUES (:email)'); //insertion de l'email dans la DB
 	  $inscriptionNews->bindValue(':email', $_POST['email']);

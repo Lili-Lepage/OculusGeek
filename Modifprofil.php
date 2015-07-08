@@ -1,6 +1,7 @@
 <?php
  session_start();
 
+//AFFICHAGE DU COMPTE DU USER ET POSSIBILITE DE MODIFICATION
 
 include 'Class/Utilisateur.php';
 

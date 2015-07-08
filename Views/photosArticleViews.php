@@ -6,7 +6,8 @@
      <!-- On limite le fichier à 100Ko -->
      Fichier : <input type="file" name="image">
      <input type="submit" name="upload" value="upload">
-     <?php if (isset($photoPath)) {
+
+     <?php if (isset($photoPath)) {         //affichage de l'url de l'image  copier dans l'article
          echo '&lt;img src="'.$photoPath.'" /&gt;';
      }?>
 </form>

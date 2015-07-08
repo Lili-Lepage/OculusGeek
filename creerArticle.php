@@ -2,15 +2,17 @@
 
 <?php
 
-include 'Class/Article.php';
+//Creation d'article
 
-include "Views/creerArticleViews.php";
+    include 'Class/Article.php';
 
-echo date('d/m/Y', time());
+    echo date('d/m/Y', time()); //date de la création
 
-$monArticle=new Article;
+    $monArticle=new Article;
 
-$monArticle->ecritureArticle();
+    $monArticle->ecritureArticle();
+
+    include "Views/creerArticleViews.php";
 
 ?>
 
