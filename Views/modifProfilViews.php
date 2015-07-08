@@ -52,7 +52,8 @@
                 </tr>
                 <tr>
                   <td>inscription à la news letter </td>
-                  <td><input type="checkbox" name="newsLetters" placeholder="email" /></td>
+                <!--   <td><input type="checkbox" name="newsLetters" checked /></td> -->
+               <td><input type="checkbox" name="newsLetters" <?php echo $profil->getInscriptionNL();?> /></td>
                 </tr>
                 <tr>
                 <td>Loisirs/centre d'intérêts</td>

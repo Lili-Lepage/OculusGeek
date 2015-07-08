@@ -16,6 +16,7 @@ class Utilisateur {
     private $geekHobits = '';
     private $grade=1;
     private $emailId='';
+    private $InscriptionNL='';
 
   /*  public function __construct(){}*/
 
@@ -171,7 +172,7 @@ class Utilisateur {
 
                     /* AFFICHER LE FORMULAIRE ET ENREGISTRER LES MODIFICATIONS DU PROFIL */
 
-    public function modifProfil($modifpseudo,$firstName,$lastName,$birthDate,$sexe,$email,$hobits,$geektHobits,$userID){
+    public function modifProfil($modifpseudo,$firstName,$lastName,$birthDate,$sexe,$email,$hobits,$geektHobits,$userID,$inscriptionNL){
         include 'libs/db.php';
         $pseudo=$_SESSION['login'];
               $maj=$connexion->query("UPDATE users
@@ -182,7 +183,8 @@ class Utilisateur {
                                             sexe='$sexe',
                                             email='$email',
                                             hobits='$hobits',
-                                            geekHobits='$geektHobits'
+                                            geekHobits='$geektHobits',
+                                            InscriptionNL='$inscriptionNL'
                                      WHERE  userID= '$userID' ");
               $maj->execute();
             }
@@ -226,7 +228,7 @@ class Utilisateur {
 
             public function afficheProfil($id){
                 include 'libs/db.php';
-                $query=$connexion->query("SELECT pseudo, lastName, firstName, birthDate, sexe, email, hobits, geekHobits FROM users WHERE userID=".$id);
+                $query=$connexion->query("SELECT pseudo, lastName, firstName, birthDate, sexe, email, hobits, geekHobits,inscriptionNL FROM users WHERE userID=".$id);
                 $data=$query->fetch(PDO::FETCH_OBJ);
 
 
@@ -369,6 +371,27 @@ class Utilisateur {
     public function setGrade($grade)
     {
         $this->grade=$grade;
+    }
+
+
+
+
+    public function getInscriptionNL()
+    {
+        if($this->InscriptionNL==1){
+
+          $checkinscription = 'checked'; //si la checkbox = 1 la case reste cocher
+        }
+        else{
+        $checkinscription ='unchecked'; //sinon elle est décochée
+        }
+            return $checkinscription;
+    }
+
+    public function setInscripionNL()
+    {
+  $this->InscriptionNL=$InscriptionNL;
+
     }
 
 }
