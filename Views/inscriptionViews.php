@@ -4,8 +4,9 @@
 		<meta charset="utf-8" />
 
 		<link rel="stylesheet" media="all"type "text/css" href="css/fixe.css" />
+			<link rel="stylesheet" media="all"type "text/css" href="css/styles.css" />
 		<title>Occulus_Geek</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 
 		<script>
@@ -17,8 +18,8 @@
 	<body>
         <?php include 'header.php'; ?>
 
-        <form action="" method="post">
-            <table>
+    <form action="" method="post">
+            <table class="inscription">
                 <tr>
                     <td>Pseudo *</td>
                     <td><input type="text" name="pseudo" value="" /></td>
@@ -58,7 +59,7 @@
                     <td><input type="text" name="email" placeholder="xxxx@xxxx.com" /></td>
                 </tr>
                 <tr>
-                    <td>inscription à la news letter *</td>
+                    <td>Inscription à la news letter </td>
                     <td><input type="checkbox" name="newsLetters" /></td>
                 </tr>
                 <tr>
@@ -74,6 +75,7 @@
                 </tr>
             </table>
         </form>
+
 
 			<?php	include 'footer.php'; ?>
 

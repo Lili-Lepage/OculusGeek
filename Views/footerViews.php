@@ -33,7 +33,7 @@
 
                 <div class ="InscN">
                     <div class="champs">
-                      <?php if (isset($_SESSION['login']));{ ?>
+                      <?php if (empty($_SESSION['login'])){?>
                           <?php if ($signed) {    //si la personne est déjà inscrite  ?>
                               <div class="phrase">Vous êtes inscrit à notre news letter <a href="desinscriptionNews.php">je me désinscris</a></div>
 
@@ -45,7 +45,9 @@
                                       		<input type="submit" name="submit" value="je m'inscris" />
                                       	</form>
                                     <?php } ?>
-                                <?php } ?>
+                               <?php } else{?>
+                                        <a class="inscNewsLetter" href="ModifProfil.php">Je veux m'inscrire à la News Letter</a>
+                                      <?php } ?>
                     </div>
                     <div class="clear"></div>
                  </div>
@@ -64,7 +66,7 @@
                 // après le point d'intérogation : si {..} (là on affiche la popup)
                 // après les deux points : else {...} (là on affiche rien)
                 ?>
-              <?=$signed ? '<script type="text/javascript">window.alert("'.$message.'");</script>' : ''?>
+              <!--<?=$signed ? '<script type="text/javascript">window.alert("'.$message.'");</script>' : ''?>-->
 
 
         	</footer>

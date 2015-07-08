@@ -13,7 +13,7 @@
 <body>
 
 
-    <?php include "photosArticle.php"; //on inclu le formulaire pour upload une image ?>
+
 
     <h1 class="profil"><?php echo $_SESSION['login']; //afffichage du nom du user ?></h1>
 
@@ -51,6 +51,10 @@
                 <td><input type='text' name='email' value="<?php echo $profil->getEmail(); ?>" /></td>
                 </tr>
                 <tr>
+                  <td>inscription à la news letter </td>
+                  <td><input type="checkbox" name="newsLetters" placeholder="email" /></td>
+                </tr>
+                <tr>
                 <td>Loisirs/centre d'intérêts</td>
                 <td><input type='textarea' name='hobits' class="Hobits" value="<?php echo $profil->getHobits(); ?>"/></td>
                 </tr>
@@ -59,6 +63,8 @@
                 <td><input type='textarea' name='geekHobits' class="geekHobits" value="<?php echo $profil->getGeekHobits(); ?>" height='80px'  maxlength='100'/></td>
                 </tr>
                 <tr>
+
+
                   <input type='hidden' name="userID" value="<?php echo $profil->getUserID(); ?>">
                 <td><input type='submit' value='modifier' name='submit'></td>
                 </tr>

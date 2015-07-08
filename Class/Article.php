@@ -7,8 +7,12 @@ class Article{
     public $nom_article='';
     public $contenu='';
     public $date_article='';
+<<<<<<< HEAD
     private $visible=0;
     private $theme="";
+=======
+    public $visible='0';
+>>>>>>> 08/07/2015_14h29
 
 
     public function setArticleInfos($infos = array()) {  //récupération des infos de l'article dans la DB
@@ -52,7 +56,11 @@ class Article{
 
   public function recordArticle(){//Va enregistrer les articles dans la DB
     include 'libs/db.php';
+<<<<<<< HEAD
     $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,visible,theme) VALUES (:nom_article,:contenu,:date_article,:visible,:theme)');
+=======
+    $stmt=$connexion->prepare('INSERT INTO articles (nom_article,contenu,date_article,theme, visible) VALUES (:nom_article,:contenu,:date_article,:theme, :visible)');
+>>>>>>> 08/07/2015_14h29
     $stmt->bindValue(':nom_article', $_POST['nom_article']);
     $stmt->bindValue(':contenu', $_POST['contenu']);
     $stmt->bindValue(":date_article",date('Y-m-d G:i:s'));
