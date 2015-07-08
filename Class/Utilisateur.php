@@ -112,6 +112,9 @@ class Utilisateur {
 
     }
 
+
+
+
                         /* ON RECUPERE LES INFORMATIONS DU USERS PAR SON PSEUDO*/
 
 
@@ -253,6 +256,30 @@ class Utilisateur {
             }
 
 
+                  /*INSCRIPTION NEWSLETTER*/
+
+public function InscNL(){
+include 'libs/db.php'; //connexion à la DB
+$inscriptionNL=$connexion->prepare('INSERT INTO newslettersmails (email)
+                                    VALUES (:email)');
+$inscriptionNL->bindValue(':email', $this->email);
+
+$inscriptionNL->execute();
+
+}
+
+
+              /*DESINSCRIPTION NEWSLETTER*/
+
+public function DesinNL(){
+
+include 'libs/db.php'; //connexion à la DB
+$desinscriptionN=$connexion->prepare('DELETE from newslettersmails where email =:email');
+$desinscriptionN->bindValue(':email', $_POST['email']);
+$desinscriptionN->execute();
+
+
+}
 
 
 

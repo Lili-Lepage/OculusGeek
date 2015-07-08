@@ -10,4 +10,5 @@ include 'Class/Article.php';
 $list=new Article;
 $list->ListArticle(TRUE);
 
+include 'footer.php';
 ?>

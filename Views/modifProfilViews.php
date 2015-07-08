@@ -7,13 +7,14 @@
   <title>Occulus_Geek</title>
 </head>
 
-<?php include 'header.php'; ?>
+
+
 
 
 <body>
 
-
-
+  <?php include 'header.php'; ?>
+<div class="footerMP"><?php include 'footer.php'; ?></div>
 
     <h1 class="profil"><?php echo $_SESSION['login']; //afffichage du nom du user ?></h1>
 

@@ -4,24 +4,28 @@ session_start();
 
 include 'header.php';
 include 'Views/desinscriptionNewsViews.php';
-
+include_once 'Class/Utilisateur.php';
 
   $messageD='vous etes maintenant desinscrit';
-	$desinscription = false; //variable désignant si une personne est inscrite ou non
+
 
 	if (isset($_POST['email']) && isset($_POST['submit'])) {
   $message = 'inscription réussie'; //variable contenant le message de la fenêtre popup
 
-		include 'libs/db.php'; //connexion à la DB
+  $profil= new Utilisateur;
+  $profil->DesinNL();
+
+
+	/*	include 'libs/db.php'; //connexion à la DB
     $desinscriptionN=$connexion->prepare('DELETE from newslettersmails where email =:email');
 	  $desinscriptionN->bindValue(':email', $_POST['email']);
-		$desinscriptionN->execute();
+		$desinscriptionN->execute();*/
 
-		$desinscription = true; //personne vient de s'inscrire
+
     echo'<script type="text/javascript">window.alert("'.$messageD.'");</script>';
 
    }
- 
+
 
 
 
